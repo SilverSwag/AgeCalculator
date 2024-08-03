@@ -112,6 +112,9 @@
 </head>
 <body>
     <main>
+        <div class="upper_main">
+
+        </div>
         <div class="name">
             <label for="name">Enter Your Name:</label> <br>
             <input type="text" id="name" placeholder="YOU BETTER ENTER">
@@ -557,23 +560,25 @@
         </div>
     </main>
     <script> 
-        alert("⚠️WARNING⚠️:This site is very explicit. Any persons under the age of 18 is not allowed to be on this site.")
-        const option1 = document.getElementById("selection1")
-        const option2 = document.getElementById("selection2")
-        const name = document.getElementById("name")
-        const linkk = document.getElementById("linkk")
+        alert("⚠️WARNING⚠️:This site is very explicit. Any persons under the age of 18 is not allowed to be on this site.");
+        const option1 = document.getElementById("selection1");
+        const option2 = document.getElementById("selection2");
+        const name = document.getElementById("name");
+        const linkk = document.getElementById("linkk");
+        const button = document.querySelector(".btn");
         function calculateAge(){
-            let age = name.value + ", your age is " + (option1.value - option2.value) + " years."
+            let age = name.value + ", your age is " + (option1.value - option2.value) + " years.";
             if(name.value == ""){
-                age = "Enter your name first you bitch"
+                age = "Enter your name first you bitch";
             } else if (option1.value < option2.value){
-                age = name.value + " you cannot be born in the future fucking idiot"
+                age = name.value + " you cannot be born in the future fucking idiot";
             } else if ((option1.value - option2.value) >= 18){
-                age += " You are an adult, feel free to watch other people having sex."
+                age += " You are an adult, feel free to watch other people having sex.";
                 linkk.style.display = "block" 
+                button.style.display = "none";
             } else if ((option1.value - option2.value) < 18){
-                age += " You are still a little baby so no sex shows for you tiny one."
-                linkk.style.display = "none"
+                age += " You are still a little baby so no sex shows for you tiny one.";
+                linkk.style.display = "none";
             }
             document.getElementById("age").innerHTML = age 
         }
