@@ -315,7 +315,7 @@
                     <option value="2100" disabled>2100</option>
                 </select> <br>
                 <select name="year of birth" id="selection2" class="select">
-                    <option value="" disabled selected>Select the year you spawed</option>
+                    <option value="disabled" disabled selected>Select the year you spawed</option>
                     <option value="1900">1900</option>
                     <option value="1901">1901</option>
                     <option value="1902">1902</option>
@@ -570,6 +570,8 @@
             } else if ((option1.value - option2.value) < 18){
                 age += " You are still a little baby so no sex shows for you tiny one.";
                 linkk.style.display = "none";
+            }else if(option2.value){
+                name.value;
             }
             document.getElementById("age").innerHTML = age 
         }
