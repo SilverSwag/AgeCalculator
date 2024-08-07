@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Age Calculator</title>
-    <link rel="icon" href="https://preview.redd.it/friday-is-futakate-day-v0-7ausmraprqwb1.jpg?width=640&crop=smart&auto=webp&s=0712c5c4c924d7d31cf703f16f426db45a5f80c0">
+    <link rel="icon" href="https://rswpthemes.com/wp-content/uploads/2023/11/Age-calculator.jpg">
     <style>
+        *{
+            color: white;
+        }
         body{
             box-sizing: border-box;
             font-family: sans-serif;
-            display: flex;
-            justify-content: center;
             background-color: black;
-            background-attachment: fixed;
-            /* background-image: url("https://ei.phncdn.com/videos/202205/11/407920441/original/(m=qM925NXbeaSaaTbaAaaaa)(mh=0jJpipuDt_2QPX6s)0.jpg"); */
-            background-image: url("https://thumb-lvlt.xhcdn.com/a/CVobF0GtOURfa4K82SRgKw/022/713/721/v2/2560x1440.203.webp");
-            background-size: cover;
-            background-repeat: no-repeat;
             user-select: none;
         }
         main{
@@ -36,23 +32,28 @@
         .name{
             margin-bottom: 20px;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
         }
         button{
             cursor: pointer;
-            background: black;
-            color: white;
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
         }
         a{
-            color: rgb(143, 0, 0);
+            color: rgb(255, 100, 100);
         }
         .age{
             background-color: rgba(0, 0, 0, 0.534);
-            color: white;
             text-align: center;
+            border-radius: 5px;
         }
         #age{
             padding:5px;
+            color: rgb(148, 255, 148);
+            
         }
         #linkk{
             display: none;
@@ -68,8 +69,14 @@
             justify-content: center;
         }
         .selection{
-            justify-content: center;
+            justify-content: space-evenly;
             display: flex;
+        }
+        .selection select{
+            width: 300px;
+        }
+        option{
+            color: black;
         }
         .iframe{
             display: flex;
@@ -77,25 +84,39 @@
             padding: 10px;
         }
         input ,.select{
-            background-color: black;
-            color: white;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+        .name input{
+            width: 100%;
+            text-align: center;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .name input:focus{
+            outline: none;
         }
         .select{
             padding: 5px;
             cursor: pointer;
             margin: 10px;
+            border-radius: 5px;
+        }
+        .select:focus{
+            outline: none;
         }
         .paragrapgh{
             display: none;
         }
-        @media only screen and (max-width: 811px){
+        footer{
+            background-color: rgba(255, 255, 255, 0.124);
+            padding: 10px;
+            text-align: center;
+        }
+        @media only screen and (max-width: 500px){
             body{
                 text-align: center;
-                /* background-image: url("https://erome.fan/wp-content/uploads/2023/07/l9a15iu9.jpeg"); */
-                background-image: url("https://static-ca-cdn.eporner.com/gallery/mk/ML/KG5gPfDMLmk/10317704-5911d901-2a5e-4eba-9b19-7abb2e3ac023.jpg");
-            }
-            .name{
-                display: block;
             }
             .selection{
                 display: block;
@@ -109,7 +130,7 @@
 <body>
     <main>
         <div class="name">
-            <input type="text" id="name" placeholder="ENTER YOU NAME">
+            <input type="text" id="name" placeholder="ENTER YOU NAME" autocomplete="off">
         </div>
         <div class="container">
             <div class="selection">
@@ -522,10 +543,10 @@
                 </select>
             </div>
             <div class="btn">
-                <button onclick="calculateAge()">Press to calculate your age</button>
+                <button onclick="calculateAge()">Calculate</button>
             </div>
             <div class="age">
-                <p id="age">Your age will appear here incase you are wondering</p>
+                <p id="age">WELCOME! Your age will appear here</p>
             </div>
         </div>
         <div class="paragrapgh">
@@ -550,32 +571,45 @@
             </div>
         </div>
     </main>
-    <script> 
-        alert("⚠️WARNING⚠️:This site is very explicit. Any persons under the age of 18 is not allowed to be on this site.");
-        const option1 = document.getElementById("selection1");
-        const option2 = document.getElementById("selection2");
-        const name = document.getElementById("name");
-        const linkk = document.getElementById("linkk");
-        const button = document.querySelector(".btn");
-        const para = document.querySelector(".paragrapgh");
+    <footer>
+        <p>&copy; 2024 All rights reserved</p>
+    </footer>
+    <script>
         function calculateAge(){
-            let age = name.value + ", your age is " + (option1.value - option2.value) + " years.";
-            if(name.value == ""){
-                age = "Enter your name first you bitch";
-            } else if (option1.value < option2.value){
-                age = name.value + " you cannot be born in the future fucking idiot";
-            } else if ((option1.value - option2.value) >= 18){
-                age += " You are an adult, feel free to watch other people having sex.";
-                linkk.style.display = "block";
-                button.style.display = "none";
-                para.style.display = "block";
-            } else if ((option1.value - option2.value) < 18){
-                age += " You are still a little baby so no sex shows for you tiny one.";
-                linkk.style.display = "none";
-            }else if(option2.value){
-                name.value;
+            class Calculator{
+                constructor(){
+                    this.option1 = document.getElementById("selection1").value;
+                    this.option2 = document.getElementById("selection2").value;
+                    this.name = document.getElementById("name").value;
+                    this.link = document.getElementById("linkk");
+                    this.button = document.querySelector(".btn");
+                    this.para = document.querySelector(".paragrapgh");
+                    this.ageText = document.getElementById("age");
+                    this.age = this.name + ", your age is " + (this.option1 - this.option2) + " years.";
+                }
+                yourAge(){
+                    if(this.name.length == 0){
+                        this.age = "Please enter your name";
+                        this.ageText.style.color = "red";
+                    }else if(this.option1 < this.option2){
+                        this.age = this.name + ", that is just impossible!!!";
+                        this.ageText.style.color = "red";
+                    }else if((this.option1 - this.option2) >= 18){
+                        this.age += " You are an adult, you are free to watch other people have sex (✿◡‿◡)" 
+                        this.link.style.display = "block";
+                        this.button.style.display = "none";
+                        this.para.style.display = "block";
+                        this.ageText.style.color = "rgb(148, 255, 148)";
+                    }else if((this.option1 - this.option1) < 18){
+                        this.age += " You are still a child"
+                        this.link.style.display = "none";
+                        this.ageText.style.color = "rgb(148, 255, 148)";
+                    }
+                    this.ageText.innerHTML = this.age;
+                }
             }
-            document.getElementById("age").innerHTML = age 
+            let calculator = new Calculator();
+            calculator.yourAge();
         }
     </script>
 </body>
