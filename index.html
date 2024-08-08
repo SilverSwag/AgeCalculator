@@ -138,7 +138,7 @@
     <main>
         <div class="user_info">
             <div class="name">
-                <input type="text" id="name" placeholder="ENTER YOU NAME" autocomplete="off">
+                <input type="text" id="name" placeholder="ENTER YOUR NAME" autocomplete="off">
             </div>
             <div class="container">
                 <div class="selection">
@@ -599,14 +599,14 @@
                     this.age = "";
                 }
                 yourAge(){
-                    if(this.name.length == 0){
+                    if(this.name == ""){
                         this.age = "Please enter your name";
                         this.ageText.style.color = "red";
                     }else if(this.option1 < this.option2){
                         this.age = this.name.toUpperCase() + "!!!!! that is just impossible＞︿＜";
                         this.ageText.style.color = "red";
                     }else if((this.option1 - this.option2) >= 100){
-                        this.age = this.name.toUpperCase() + " YOU ARE " + (this.option1 - this.option2) + " YEARS OLD 💀💀 ??"; 
+                        this.age = (this.option1 - this.option2) + " YEARS OLD💀💀?? " + this.name.toUpperCase() + " you should be deleted by now!"; 
                         this.link.style.display = "block";
                         this.button.style.display = "none";
                         this.para.style.display = "block";
@@ -614,7 +614,6 @@
                         this.ageText.style.color = "rgb(255, 0, 0)";
                         this.ageText.style.fontWeight = "bold";
                     }else if((this.option1 - this.option2) >= 18){
-                        // alert(this.name + " you are " + (this.option1 - this.option2) + " years old.");
                         this.ageText.style.display = "none";
                         this.link.style.display = "block";
                         this.button.style.display = "none";
