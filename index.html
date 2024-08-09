@@ -120,17 +120,37 @@
             body{
                 background-image: url("https://th.bing.com/th/id/OIF.fAkRaP6gzCQnRELRzU2VSQ?rs=1&pid=ImgDetMain");
             }
-            *{
-                text-align: center;
-            }
             .selection{
                 display: block;
             }
+            .select{
+                text-align: center;
+            }
+            .paragrapgh p{
+                text-align: center;
+            }
+            input{
+                color: white;
+                background-color: black;
+            }
+            .select
             iframe{
                 height: 250px;
             }
+            button{
+                background-color: black;
+                color: white;
+            }
+            option{
+                color: white;
+            }
+            #age{
+                text-align: center;
+            }
             .select{
                 width: 100%;
+                background-color: black;
+                color: white;
             }
             main{
             background-color: rgba(255, 255, 255, 0.16);
@@ -140,11 +160,39 @@
             margin: 5px;
             overflow: hidden;
             border-radius: 10px;
+            }
+            #link{
+                text-align: center;
+            }
         }
+        header{
+            padding: 10px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .slogan{
+            font-size: 25px;
+            font-weight: bolder;
+            font-style: italic;
+            color: blueviolet;
+        }
+        .logo div p{
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="https://spsainik.com/wp-content/uploads/2023/01/Age-Calculator.png" alt="logo" height="50px">
+            <div>
+                <p>Age Calculator <br> <span class="slogan">Know your age</span></p>
+            </div>
+        </div>
+    </header>
     <main>
         <div class="user_info">
             <div class="name">
@@ -561,7 +609,7 @@
                     </select>
                 </div>
                 <div class="btn">
-                    <button onclick="calculateAge()">Calculate</button>
+                    <button onclick="calculateAge()">Click to Calculate</button>
                 </div>
             </div>
         </div>   
