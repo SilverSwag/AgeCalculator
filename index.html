@@ -65,9 +65,22 @@
             display: flex;
             justify-content: center;
         }
+        @keyframes main {
+                from{
+                    opacity: 0;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
         main{
             padding: 10px;
             margin: 10px;
+            animation-name: main;
+            animation-timing-function: ease-in-out;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-delay: 1.5s;
         }
         .selection{
             justify-content: space-between;
@@ -111,6 +124,11 @@
         footer{
             padding: 10px;
             text-align: center;
+            animation-name: main;
+            animation-timing-function: ease-in-out;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+            animation-delay: 1.5s;
         }
         .user_name{
             text-align: center;
@@ -151,13 +169,13 @@
                 color: white;
             }
             main{
-            background-color: rgba(255, 255, 255, 0.16);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.50);
-            padding: 5px;
-            margin: 5px;
-            overflow: hidden;
-            border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.16);
+                backdrop-filter: blur(5px);
+                border: 1px solid rgba(255, 255, 255, 0.50);
+                padding: 5px;
+                margin: 5px;
+                overflow: hidden;
+                border-radius: 10px;
             }
             #link{
                 text-align: center;
@@ -166,10 +184,28 @@
         header{
             padding: 10px;
         }
+        @keyframes logo {
+            0%{
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            50%{
+                transform: translateY(50px);
+                opacity: 1;
+            }
+            100%{
+                transform: translate(0px);
+            }
+        }
         .logo{
             display: flex;
             align-items: center;
             justify-content: center;
+            animation-name: logo;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-fill-mode: both;
         }
         .slogan{
             font-size: 25px;
