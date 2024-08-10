@@ -216,6 +216,37 @@
         .logo div p{
             font-size: 20px;
         }
+        .version p{
+            text-align: center;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: oblique;
+            color: grey;
+        }
+        .version p:nth-child(2){
+            text-decoration: underline;
+            color: white;
+            font-size: 20px;
+            font-style: normal;
+        }
+        .notes{
+            display: none;
+            background-color: rgb(128, 128, 128);
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .notes p{
+            text-align: center;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            font-style: oblique;
+            color: rgb(0, 0, 0);
+            text-decoration: underline;
+        }
+        .notes ol li{
+            color: black;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -223,12 +254,29 @@
         <div class="logo">
             <img src="https://spsainik.com/wp-content/uploads/2023/01/Age-Calculator.png" alt="logo" height="50px">
             <div>
-                <p>Age Calculator <br> <span class="slogan">Know your age</span></p>
+                <p>Age Calculator <br> <span class="slogan">Know your age </span></p>
             </div>
         </div>
     </header>
     <main>
         <div class="user_info">
+            <div class="version">
+                <p>V1.1</p>
+                <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
+            </div>
+            <div class="notes">
+                <p>V1.0 (August 3rd 2024)</p>
+                <ol>
+                    <li>Software release</li>
+                </ol>
+                <p>V1.1 (August 11th 2024)</p>
+                <ol>
+                    <li>New background look.</li>
+                    <li>Animations added.</li>
+                    <li>New color to the button, name input field and dropdowns.</li>
+                    <li>Now you are able to view update/release notes for this software</li>
+                </ol>
+            </div>
             <div class="name">
                 <input type="text" id="name" placeholder="ENTER YOUR NAME" autocomplete="off">
             </div>
@@ -656,7 +704,7 @@
                 Hello <span class="span"></span>, My name is Ian Omwoyo and i have just <span style="color: red; font-weight: bolder;">FOOLED YOU</span>. I am the developer of this software. For years i have always loved coding 
                 and making softwares like this one. You now have a <span style="color: red; font-weight: bolder;">POTENTIAL SPYWARE</span> installed into your gadget. I love my work and so should u as the user. So now that you have a 
                 virus installed into your gadget to lick your balls, i have all your personal data collected and you cannot do anything about it 😙😙. Anyways now that you are depressed 
-                <span style="color: red; font-weight: bolder;">AS FUCK</span>, there is a video below of a black girl sucking some BBC. You can watch that video to calm your ass down from the panic fury mode. HAVE A LOVELY DAY.
+                <span style="color: red; font-weight: bolder;">AS FUCK</span>, there is a video below of a black hoe sucking some BBC. You can watch that video to calm your ass down from the panic fury mode. HAVE A LOVELY DAY.
             </p>
         </div>
         <div id="linkk">
@@ -676,6 +724,25 @@
         <p>&copy; 2024 All rights reserved</p>
     </footer>
     <script>
+        function viewReleaseNotes(){
+            class Notes{
+                constructor(){
+                    this.note = document.querySelector(".notes");
+                    this.noteButton = document.getElementById("notebutton");
+                }
+                notes(){
+                    if(this.noteButton.innerHTML == "Click to view release notes"){
+                        this.noteButton.innerHTML = "Click to hide release notes";
+                        this.note.style.display = "block";
+                    }else{
+                        this.noteButton.innerHTML = "Click to view release notes";
+                        this.note.style.display = "none";
+                    }
+                }
+            }
+            let n = new Notes();
+            n.notes();
+        }
         function calculateAge(){
             class Calculator{
                 constructor(){
