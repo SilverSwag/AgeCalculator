@@ -29,7 +29,7 @@
             display: flex;
             justify-content: space-evenly;
         }
-        button{
+        .btn button{
             cursor: pointer;
             background: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
@@ -87,15 +87,15 @@
             justify-content: space-between;
             display: flex;
         }
-        option{
-            color: black;
+        .select option{
+            color: rgb(0, 0, 0);
         }
         .iframe{
             display: flex;
             justify-content: center;
             padding: 10px;
         }
-        input ,.select{
+        .name input ,.select{
             background-color: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
         }
@@ -136,7 +136,45 @@
             color: rgb(148, 255, 148);
             display: none;
         }
+        .access{
+            display: flex;
+            justify-content: space-between;
+            animation-name: logo;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-fill-mode: both;
+        }
+        .access div{
+            width: 40%;
+        }
+        .access div input{
+            width: 100%;
+            color: black;
+            padding: 5px;
+        }
+        .access div button{
+            width: 100%;
+            color: black;
+            padding: 5px;
+        }
         @media only screen and (max-width: 500px){
+            .access div{
+                width: 100%;
+            }
+            .access div input{
+                color: rgb(255, 255, 255);
+                background-color: black;
+                border: 1px solid white;
+            }
+            .access div input:focus{
+                outline: none;
+            }
+            .access div button{
+                color: rgb(255, 255, 255);
+                background-color: black;
+                border: 1px solid white;
+            }
             .selection{
                 display: block;
             }
@@ -146,7 +184,7 @@
             .paragrapgh p{
                 text-align: center;
             }
-            input{
+            .name input{
                 color: white;
                 background-color: black;
             }
@@ -154,11 +192,11 @@
             iframe{
                 height: 250px;
             }
-            button{
+            .btn button{
                 background-color: black;
                 color: white;
             }
-            option{
+            .select option{
                 color: white;
             }
             #age{
@@ -249,28 +287,6 @@
             color: black;
             font-style: italic;
         }
-        .access input{
-            width: 40%;
-            text-align: center;
-            border: none;
-            padding: 5px;
-            border-radius: 5px;
-            border: 1px solid white;
-        }
-        .access button{
-            width: 40%;
-            border: 1px solid white;
-        }
-        .access{
-            display: flex;
-            justify-content: space-between;
-            border-radius: 5px;
-            animation-name: logo;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            animation-fill-mode: both;
-        }
     </style>
 </head>
 <body>
@@ -282,8 +298,12 @@
             </div>
         </div>
         <div class="access">
-            <input id="pin" type="number" placeholder="ENTER PIN">
-            <button onclick="acceptPin()">Accept</button>
+            <div>
+                <input id="pin" type="number" placeholder="ENTER PIN">
+            </div>
+            <div>
+                <button onclick="acceptPin()">Accept</button>
+            </div>
         </div>
     </header>
     <main>
@@ -750,8 +770,8 @@
         <p>&copy; 2024 SILVERSWAG LTD All rights reserved</p>
     </footer>
     <script>
-        alert("Before you start using this site, first you will need to crack the 4 digit security pin.")
-        alert("The security pin is (9[1x1][2x4]2) FIGURE IT OUT. For those who know the F12 thing will find the pin");
+        // alert("Before you start using this site, first you will need to crack the 4 digit security pin.")
+        // alert("The security pin is (9[1x1][2x4]2) FIGURE IT OUT. For those who know the F12 thing will find the pin");
         function acceptPin(){
             class Pin{
                 constructor(pin){
