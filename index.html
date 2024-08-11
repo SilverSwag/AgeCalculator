@@ -80,7 +80,8 @@
             animation-timing-function: ease-in-out;
             animation-duration: 2s;
             animation-fill-mode: both;
-            animation-delay: 1.5s;
+            animation-delay: 0s;
+            display: none;
         }
         .selection{
             justify-content: space-between;
@@ -248,6 +249,28 @@
             color: black;
             font-style: italic;
         }
+        .access input{
+            width: 40%;
+            text-align: center;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid white;
+        }
+        .access button{
+            width: 40%;
+            border: 1px solid white;
+        }
+        .access{
+            display: flex;
+            justify-content: space-between;
+            border-radius: 5px;
+            animation-name: logo;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-fill-mode: both;
+        }
     </style>
 </head>
 <body>
@@ -257,6 +280,10 @@
             <div>
                 <p>Age Calculator <br> <span class="slogan">Know your age </span></p>
             </div>
+        </div>
+        <div class="access">
+            <input id="pin" type="number" placeholder="ENTER PIN">
+            <button onclick="acceptPin()">Accept</button>
         </div>
     </header>
     <main>
@@ -268,7 +295,7 @@
             <div class="notes">
                 <p>V1.0 (August 3rd 2024)</p>
                 <ol>
-                    <li>Software release</li>
+                    <li>Software launch</li>
                 </ol>
                 <p>V1.1 (August 11th 2024)</p>
                 <ol>
@@ -276,6 +303,8 @@
                     <li>Animations added.</li>
                     <li>New color to the button, name input field and dropdowns.</li>
                     <li>Now you are able to view update/release notes for this software</li>
+                    <li>The nonsense prank of spyware has been removed</li>
+                    <li>User now needs to find the security pin to use this software</li>
                 </ol>
             </div>
             <div class="name">
@@ -700,13 +729,9 @@
             <p id="age">WELCOME! Your age will appear here</p>
         </div>
         <div class="paragrapgh">
-            <h1 style="color: red; font-weight: bolder; text-align: center;">😈FOOLED😈</h1>
-            <p>
-                Hello <span class="span"></span>, My name is Ian Omwoyo and i have just <span style="color: red; font-weight: bolder;">FOOLED YOU</span>. I am the developer of this software. For years i have always loved coding 
-                and making softwares like this one. You now have a <span style="color: red; font-weight: bolder;">POTENTIAL SPYWARE</span> installed into your gadget. I love my work and so should u as the user. So now that you have a 
-                virus installed into your gadget to lick your balls, i have all your personal data collected and you cannot do anything about it 😙😙. Anyways now that you are depressed 
-                <span style="color: red; font-weight: bolder;">AS FUCK</span>, there is a video below of a black hoe sucking some BBC. You can watch that video to calm your ass down from the panic fury mode. HAVE A LOVELY DAY.
-            </p>
+            <h1 style="color: rgb(21, 255, 0); font-weight: bolder; text-align: center;">ADULT</h1>
+            <p>Hello <span class="span"></span>, now that the system has confirmed you are an adult (for which u might be lying and that will be your problem), and nobody wants to be with your ass it is very much legal for you to view some adult contents and make yourself happy knowing you never getting laid.</p>
+            <p>Below is your libido booster. HAVE FUNNNNNNN!!!!😀😃</p>
         </div>
         <div id="linkk">
             <div class="iframe">
@@ -717,14 +742,37 @@
             </div>
             <h1 class="user_name"></h1>
             <div class="img">
-                <img src="https://assets.change.org/photos/0/ie/ac/AsIEaCykcsdmqch-800x450-noPad.jpg?1555804724" alt="Porn" height="130px" width="250px">
+                <img src="https://spsainik.com/wp-content/uploads/2023/01/Age-Calculator.png" alt="Porn" height="230px" width="250px">
             </div>
         </div>
     </main>
     <footer>
-        <p>&copy; 2024 All rights reserved</p>
+        <p>&copy; 2024 SILVERSWAG LTD All rights reserved</p>
     </footer>
     <script>
+        alert("Before you start using this site, first you will need to crack the 4 digit security pin.")
+        alert("The security pin is (9[1x1][2x4]2) FIGURE IT OUT. For those who know the F12 thing will find the pin");
+        function acceptPin(){
+            class Pin{
+                constructor(pin){
+                    this.pinInput = parseInt(document.getElementById("pin").value);
+                    this.main = document.querySelector("main");
+                    this.access = document.querySelector(".access");
+                    this.pin = parseInt(pin);
+                }
+                enterPin(){
+                    if(this.pinInput != this.pin){
+                        alert("ACCESS DENIED");
+                    }else{
+                        alert("ACCESS GRANTED")
+                        this.main.style.display = "block";
+                        this.access.style.display = "none";
+                    }
+                }
+            }
+            let p = new Pin(9182);
+            p.enterPin();
+        }
         function viewReleaseNotes(){
             class Notes{
                 constructor(){
@@ -766,7 +814,7 @@
                         this.age = this.name.toUpperCase() + "!!!!! that is just impossible＞︿＜";
                         this.ageText.style.color = "red";
                     }else if((this.option1 - this.option2) >= 100){
-                        this.age = (this.option1 - this.option2) + " YEARS OLD💀💀?? " + this.name.toUpperCase() + " you should be deleted by now!"; 
+                        this.age = (this.option1 - this.option2) + " YEARS OLD💀💀?? " + this.name.toUpperCase() + " are you.... IMMMOOORRRTTTTAAALLLLL!!!!"; 
                         this.link.style.display = "block";
                         this.button.style.display = "none";
                         this.para.style.display = "block";
@@ -774,7 +822,7 @@
                         this.ageText.style.color = "rgb(255, 0, 0)";
                         this.ageText.style.fontWeight = "bold";
                     }else if((this.option1 - this.option2) >= 18){
-                        this.ageText.style.display = "none";
+                        this.age = this.name.toUpperCase() + " you are " + (this.option1 - this.option2) + " years old"; 
                         this.link.style.display = "block";
                         this.button.style.display = "none";
                         this.para.style.display = "block";
@@ -786,7 +834,7 @@
                         this.ageText.style.color = "rgb(148, 255, 148)";
                     }
                     this.ageText.innerHTML = this.age;
-                    this.user_name.innerHTML = " GET HORNY NOW FOR FREE " + this.name.toUpperCase();
+                    this.user_name.innerHTML = "HI! MY NAME IS " + this.name.toUpperCase() + ". I CANNOT GET LAID BECAUSE NOBODY WANTS ME AND I'M HORNY AS FUCK. MASTURBATING TO PORN IS ALL I HAVE LEFT 🥺💔";
                     this.span.innerHTML = this.name.toUpperCase();
                     this.span.style.color = "rgb(148, 255, 148)";
                 }
