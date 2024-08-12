@@ -781,9 +781,9 @@
                 }
                 enterPin(){
                     if(this.pinInput != this.pin){
-                        alert("ACCESS DENIED");
+                        alert("ACCESS DENIED! " + this.pinInput + " is not the pin");
                     }else{
-                        alert("ACCESS GRANTED")
+                        alert("ACCESS GRANTED! " + this.pinInput + " is the pin");
                         this.main.style.display = "block";
                         this.access.style.display = "none";
                     }
