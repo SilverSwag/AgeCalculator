@@ -158,22 +158,36 @@
             color: black;
             padding: 5px;
         }
+        .mobile{
+            font-size: 10px;
+            font-style: italic;
+            display: none;
+        }
         @media only screen and (max-width: 500px){
+            .mobile{
+                display: block;
+            }
             .access div{
                 width: 100%;
             }
             .access div input{
-                color: rgb(255, 255, 255);
-                background-color: black;
-                border: 1px solid white;
+                color: rgb(0, 0, 0);
+                border: 3px solid rgb(0, 0, 0);
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
             .access div input:focus{
                 outline: none;
             }
             .access div button{
-                color: rgb(255, 255, 255);
-                background-color: black;
-                border: 1px solid white;
+                color: rgb(0, 0, 0);
+                border: 3px solid rgb(0, 0, 0);
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
             .selection{
                 display: block;
@@ -308,7 +322,7 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V1.2</p>
+                <p>V1.3</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
@@ -328,6 +342,10 @@
                 <p>V1.2 (August 12th 2024)</p>
                 <ol>
                     <li>Changed the alert text</li>
+                </ol>
+                <p>V1.3 (November 11th 2024)</p>
+                <ol>
+                    <li>Small changes to the mobile version user interface</li>
                 </ol>
             </div>
             <div class="name">
@@ -770,10 +788,11 @@
         </div>
     </main>
     <footer>
+        <p class="mobile">You are on mobile</p>
         <p>&copy; 2024 SILVERSWAG LTD All rights reserved</p>
     </footer>
     <script>
-        alert("Before you start using this site, first you will need to crack the 4 digit secret pin. The secret pin is 9[1x1][2x4]2 FIGURE IT OUT (Don't start doing algebra 🫤). For those who know the F12 thing will find the pin easily");
+        // alert("Before you start using this site, first you will need to crack the 4 digit secret pin. The secret pin is 9[1x1][2x4]2 FIGURE IT OUT (Don't start doing algebra 🫤). For those who know the F12 thing will find the pin easily");
         function acceptPin(){
             class Pin{
                 constructor(pin){
