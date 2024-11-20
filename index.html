@@ -312,7 +312,7 @@
         </div>
         <div class="access">
             <div>
-                <input id="pin" type="number" placeholder="SECRET PIN (9[1x1][2x4]2)">
+                <input id="pin" type="number" placeholder="SECRET PIN (2[1x1][2x4]9)">
             </div>
             <div>
                 <button onclick="acceptPin()">Accept</button>
@@ -322,7 +322,7 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V1.3</p>
+                <p>V1.4</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
@@ -346,6 +346,10 @@
                 <p>V1.3 (November 11th 2024)</p>
                 <ol>
                     <li>Small changes to the mobile version user interface</li>
+                </ol>
+                <p>V1.4 (November 20th 2024)</p>
+                <ol>
+                    <li>Made the pin ever harder to guess 😀😎</li>
                 </ol>
             </div>
             <div class="name">
@@ -792,7 +796,7 @@
         <p>&copy; 2024 SILVERSWAG LTD All rights reserved</p>
     </footer>
     <script>
-        alert("Before you start using this site, first you will need to crack the 4 digit secret pin. The secret pin is 9[1x1][2x4]2 FIGURE IT OUT (Don't start doing algebra 🫤). For those who know the F12 thing will find the pin easily");
+        alert("Before you start using this site, first you will need to crack the 4 digit secret pin. The secret pin is 2[1x1][2x4]9 FIGURE IT OUT (Don't start doing algebra 🫤). For those who know the F12 thing will find the pin easily");
         function acceptPin(){
             class Pin{
                 constructor(pin){
