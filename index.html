@@ -81,7 +81,6 @@
             animation-duration: 2s;
             animation-fill-mode: both;
             animation-delay: 0s;
-            display: none;
         }
         .selection{
             justify-content: space-between;
@@ -136,28 +135,6 @@
             color: rgb(148, 255, 148);
             display: none;
         }
-        .access{
-            display: flex;
-            justify-content: space-between;
-            animation-name: logo;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-delay: 0s;
-            animation-fill-mode: both;
-        }
-        .access div{
-            width: 40%;
-        }
-        .access div input{
-            width: 100%;
-            color: black;
-            padding: 5px;
-        }
-        .access div button{
-            width: 100%;
-            color: black;
-            padding: 5px;
-        }
         .mobile{
             font-size: 10px;
             font-style: italic;
@@ -166,28 +143,6 @@
         @media only screen and (max-width: 500px){
             .mobile{
                 display: block;
-            }
-            .access div{
-                width: 100%;
-            }
-            .access div input{
-                color: rgb(0, 0, 0);
-                border: 3px solid rgb(0, 0, 0);
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-            .access div input:focus{
-                outline: none;
-            }
-            .access div button{
-                color: rgb(0, 0, 0);
-                border: 3px solid rgb(0, 0, 0);
-                border-top-right-radius: 10px;
-                border-bottom-right-radius: 10px;
-                padding-top: 10px;
-                padding-bottom: 10px;
             }
             .selection{
                 display: block;
@@ -308,14 +263,6 @@
             <img src="https://spsainik.com/wp-content/uploads/2023/01/Age-Calculator.png" alt="logo" height="50px">
             <div>
                 <p>Age Calculator <br> <span class="slogan">Know your age </span></p>
-            </div>
-        </div>
-        <div class="access">
-            <div>
-                <input id="pin" type="number" placeholder="SECRET PIN (2[1x1][2x4]9)">
-            </div>
-            <div>
-                <button onclick="acceptPin()">Accept</button>
             </div>
         </div>
     </header>
@@ -796,34 +743,25 @@
         <p>&copy; 2024 SILVERSWAG LTD All rights reserved</p>
     </footer>
     <script>
-        alert("Before you start using this site, first you will need to crack the 4 digit secret pin. The secret pin is 2[1x1][2x4]9 FIGURE IT OUT (Don't start doing algebra 🫤). For those who know the F12 thing will find the pin easily");
-        function acceptPin(){
-            class Pin{
-                constructor(pin){
-                    this.pinInput = document.getElementById("pin").value;
-                    this.main = document.querySelector("main");
-                    this.access = document.querySelector(".access");
-                    this.pin = parseInt(pin);
-                }
-                enterPin(){
-                    if(this.pinInput.length == 0){
-                        alert("Please enter the 4 digit secret pin");
-                    }else if(this.pinInput < 0){
-                        alert("🤨! You must be mentally unstable i swear" );
-                    }else if(this.pinInput.length != 4){
-                        alert(this.pinInput +" IS NOT FOUR DIGITS YOU MONKEY");
-                    }else if(this.pinInput != this.pin){
-                        alert("ACCESS DENIED! " + this.pinInput + " is not the pin");
-                    }else{
-                        alert("ACCESS GRANTED! " + this.pinInput + " is the pin");
-                        this.main.style.display = "block";
-                        this.access.style.display = "none";
-                    }
+    class Prompt{
+        constructor(name){
+            this.name = name;
+        }
+        myPrompt(){
+            let userInput;
+            while(true){
+                userInput = prompt("Enter the secret pin 2[1x1][2x4]9");
+                if(userInput == this.name) {
+                    alert(userInput + " is the pin! ACCESS GRANTED");
+                    break;
+                }else{
+                    alert(userInput + " is not the pin! ACCESS DENIED");
                 }
             }
-            let p = new Pin(9182);
-            p.enterPin();
         }
+    }
+    let p = new Prompt("9182");
+    p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
                 constructor(){
