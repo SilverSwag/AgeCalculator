@@ -269,7 +269,7 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V2.0</p>
+                <p>V2.10</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
@@ -301,6 +301,10 @@
                 <p>V2.0 (December 18th 2024)</p>
                 <ol>
                     <li>Major changes to pin input UI.</li>
+                </ol>
+                <p>V2.10 (December 21st 2024)</p>
+                <ol>
+                    <li>Fixed some errors</li>
                 </ol>
             </div>
             <div class="name">
@@ -748,14 +752,14 @@
     </footer>
     <script>
     class Prompt{
-        constructor(name){
-            this.name = name;
+        constructor(pin){
+            this.pin = parseInt(pin);
         }
         myPrompt(){
             let userInput;
             while(true){
-                userInput = prompt("Enter the secret pin 2[1x1][2x4]9");
-                if(userInput == this.name) {
+                userInput = parseInt(prompt("Enter the 4 digit secret pin 2[2x4][1x1]9 (HINT🔄️)")) ;
+                if(userInput == this.pin) {
                     alert(userInput + " is the pin! ACCESS GRANTED");
                     break;
                 }else{
@@ -764,7 +768,7 @@
             }
         }
     }
-    let p = new Prompt("9182");
+    let p = new Prompt(9182);
     p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
