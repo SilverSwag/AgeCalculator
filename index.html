@@ -259,6 +259,7 @@
 </head>
 <body>
     <header>
+        <div id="clock"></div>
         <div class="logo">
             <img src="https://spsainik.com/wp-content/uploads/2023/01/Age-Calculator.png" alt="logo" height="50px">
             <div>
@@ -269,7 +270,7 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V2.0.2</p>
+                <p>V2.1.0</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
@@ -309,6 +310,10 @@
                 <p>V2.0.2 (December 22nd 2024)</p>
                 <ol>
                     <li>Minor changes</li>
+                </ol>
+                <p>V2.1.0 (December 27th 2024)</p>
+                <ol>
+                    <li>Local Time added</li>
                 </ol>
             </div>
             <div class="name">
@@ -755,25 +760,35 @@
         <p>&copy; 2024 SILVERSWAG LTD All rights reserved</p>
     </footer>
     <script>
-    class Prompt{
-        constructor(pin){
-            this.pin = parseInt(pin);
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = "Local Time: " + timeString;
         }
-        myPrompt(){
-            let userInput;
-            while(true){
-                userInput = parseInt(prompt("Enter the 4 digit secret pin 2[2x4][1x1]9 (HINT🔄️)")) ;
-                if(userInput == this.pin) {
-                    alert(userInput + "✅ Access granted (⚠️DO NOT SHARE THE PIN I REPEAT DO NOT SHARE THE PIN⚠️)");
-                    break;
-                }else{
-                    alert(userInput + "❌ ACCESS DENIED");
+        updateClock();
+        setInterval(updateClock, 1000);
+        class Prompt{
+            constructor(pin){
+                this.pin = parseInt(pin);
+            }
+            myPrompt(){
+                let userInput;
+                while(true){
+                    userInput = parseInt(prompt("Enter the 4 digit secret pin 2[2x4][1x1]9 (HINT🔄️)")) ;
+                    if(userInput == this.pin) {
+                        alert(userInput + "✅ Access granted (⚠️DO NOT SHARE THE PIN I REPEAT DO NOT SHARE THE PIN⚠️)");
+                        break;
+                    }else{
+                        alert(userInput + "❌ ACCESS DENIED");
+                    }
                 }
             }
         }
-    }
-    let p = new Prompt(9182);
-    p.myPrompt();
+        let p = new Prompt(9182);
+        p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
                 constructor(){
