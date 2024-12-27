@@ -18,6 +18,7 @@
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-color: black;
+            margin: 0;
         }
         .btn{
             margin-top: 20px;
@@ -188,20 +189,14 @@
                 text-align: center;
             }
         }
-        header{
-            padding: 10px;
-        }
         @keyframes logo {
             0%{
                 transform: translateY(-30px);
                 opacity: 0;
             }
-            50%{
-                transform: translateY(25px);
-                opacity: 1;
-            }
             100%{
-                transform: translate(0px);
+                transform: translateY(0px);
+                opacity: 1;
             }
         }
         .logo{
@@ -209,10 +204,11 @@
             align-items: center;
             justify-content: center;
             animation-name: logo;
-            animation-duration: 2s;
+            animation-duration: 1s;
             animation-timing-function: ease-in-out;
             animation-delay: 0s;
             animation-fill-mode: both;
+            padding: 10px;
         }
         .slogan{
             font-size: 25px;
@@ -255,17 +251,36 @@
             color: black;
             font-style: italic;
         }
+        @keyframes clock {
+            0%{
+                transform: translateX(-200px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        #clock{
+            animation-name: clock;
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            padding-top: 20px;
+            font-weight: bold;
+            text-decoration: underline;
+            color: gray;
+            padding-left: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <div id="clock"></div>
         <div class="logo">
             <img src="https://spsainik.com/wp-content/uploads/2023/01/Age-Calculator.png" alt="logo" height="50px">
             <div>
                 <p>Age Calculator <br> <span class="slogan">Know your age </span></p>
             </div>
         </div>
+        <hr>
+        <div id="clock"></div>
     </header>
     <main>
         <div class="user_info">
@@ -314,6 +329,7 @@
                 <p>V2.1.0 (December 27th 2024)</p>
                 <ol>
                     <li>Local Time added</li>
+                    <li>Minor UI changes</li>
                 </ol>
             </div>
             <div class="name">
@@ -788,7 +804,7 @@
             }
         }
         let p = new Prompt(9182);
-        p.myPrompt();
+        // p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
                 constructor(){
