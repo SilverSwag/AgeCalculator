@@ -604,7 +604,7 @@
             const minutes24 = String(now24.getMinutes()).padStart(2, '0');
             const seconds24 = String(now24.getSeconds()).padStart(2, '0');
             const timeString24 = `${hours24}:${minutes24}:${seconds24}`;
-            document.getElementById('clock24').textContent = "Local Time (24 hour): " + timeString24;
+            document.getElementById('clock24').textContent = `Local Time (24 hour): ${timeString24}`;
         }
         updateClock24();
         setInterval(updateClock24, 1000);
@@ -617,7 +617,7 @@
             hours = hours % 12;
             hours = hours ? String(hours).padStart(2, '0') : '12';
             const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
-            document.getElementById('clock').textContent = "Local Time (12 hour): " + timeString;
+            document.getElementById('clock').textContent = `Local Time (12 hour): ${timeString}`;
         }
         updateClock();
         setInterval(updateClock, 1000);
@@ -630,10 +630,10 @@
                 while(true){
                     userInput = parseInt(prompt("Enter the 4 digit secret pin 2[2x4][1x1]9 (HINT🔄️)")) ;
                     if(userInput == this.pin) {
-                        alert(userInput + "✅ Access granted (⚠️DO NOT SHARE THE PIN⚠️)");
+                        alert(userInput + " ✅ACCESS GRANTED✅");
                         break;
                     }else{
-                        alert(userInput + "❌ ACCESS DENIED!!");
+                        alert(userInput + " ❌ACCESS DENIED❌");
                     }
                 }
             }
@@ -678,7 +678,7 @@
                         this.age = "Please enter your name";
                         this.ageText.style.color = "red";
                     }else if(this.option1 < this.option2){
-                        this.age = this.name.toUpperCase() + "!!!!! that is just impossible＞︿＜";
+                        this.age = "ERROR!";
                         this.ageText.style.color = "red";
                     }else if((this.option1 - this.option2) >= 100){
                         alert("Calculations excecuted...");
@@ -691,14 +691,14 @@
                         this.ageText.style.fontWeight = "bold";
                     }else if((this.option1 - this.option2) >= 18){
                         alert("Calculations excecuted...");
-                        this.age = this.name.toUpperCase() + " you are " + (this.option1 - this.option2) + " years old"; 
+                        this.age = this.name.toUpperCase() + " you are turning " + (this.option1 - this.option2) + " years old this year."; 
                         this.link.style.display = "block";
                         this.button.style.display = "none";
                         this.para.style.display = "block";
                         this.user_name.style.display = "block"
                         this.ageText.style.color = "rgb(148, 255, 148)";
                     }else if((this.option1 - this.option1) < 18){
-                        this.age = this.name + " you are " + (this.option1 - this.option2) + " years old."
+                        this.age = this.name + " you are turning " + (this.option1 - this.option2) + " years old this year."
                         this.link.style.display = "none";
                         this.ageText.style.color = "rgb(148, 255, 148)";
                     }
