@@ -299,7 +299,7 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V2.3</p>
+                <p>V3.0.0</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
@@ -357,6 +357,10 @@
                 <ol>
                     <li>Kiswahili kidogo imeongezwa 🥴</li>
                     <li>Alafu hiyo pin hehehe ukikosea wewe ni fala</li>
+                </ol>
+                <p>V3.0.0 (Januari tarehe 17 mwaka 2025)</p>
+                <ol>
+                    <li>"jina la mwenyewe!" is the password</li>
                 </ol>
             </div>
             <div class="name">
@@ -502,23 +506,23 @@
         updateClock();
         setInterval(updateClock, 1000);
         class Prompt{
-            constructor(pin){
-                this.pin = parseInt(pin);
+            constructor(pass){
+                this.pass = pass;
             }
             myPrompt(){
                 let userInput;
                 while(true){
-                    userInput = parseInt(prompt("Weka namba ya siri"));
-                    if(userInput === this.pin) {
-                        alert(`✅YANI KUFIKIRIA ${userInput} NI NGUMU KWAKO ? ACHA UFALA✅`);
+                    userInput = prompt("Andika jina la mwenyewe!");
+                    if(userInput === this.pass) {
+                        alert(`✅Karibu!`);
                         break;
                     }else{
-                        alert(`❌WEWE FIKIRIA BUANA NAMBA YA SIRI SIO ${userInput}❌`);
+                        alert(`❌Hukaribishwi!!`);
                     }
                 }
             }
         }
-        let p = new Prompt(0);
+        let p = new Prompt("jina la mwenyewe!");
         p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
