@@ -52,19 +52,13 @@
             color: rgb(148, 255, 148);
             
         }
-        #linkk{
-            display: none;
-            background-color: rgba(128, 128, 128, 0.297);
-            border-radius: 10px;
-        }
         .img{
             display: flex;
             justify-content: center;
             padding: 5px;
         }
-        .link{
-            display: flex;
-            justify-content: center;
+        .img img{
+            border-radius: 10px;
         }
         @keyframes main {
                 from{
@@ -90,11 +84,6 @@
         .select option{
             color: rgb(0, 0, 0);
         }
-        .iframe{
-            display: flex;
-            justify-content: center;
-            padding: 10px;
-        }
         .name input ,.select{
             background-color: rgb(255, 255, 255);
             color: rgb(0, 0, 0);
@@ -119,8 +108,11 @@
         .select:focus{
             outline: none;
         }
-        .paragrapgh{
-            display: none;
+        #main{
+            /* display: none; */
+            background-color: rgba(128, 128, 128, 0.297);
+            border-radius: 10px;
+            padding: 10px;
         }
         footer{
             padding: 10px;
@@ -293,6 +285,33 @@
         .ver{
             display: block;
         }
+        .dickpic{
+            text-align: center;
+            font-style: italic;
+        }
+        #paybutton{
+            color: black;
+            background-color: blueviolet;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        #paybutton:hover{
+            background-color: rgba(137, 43, 226, 0.503);
+            color: #ffffff;
+        }
+        .paybutton{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .paragrapgh p{
+            font-size: 20px;
+        }
+        main{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -307,6 +326,7 @@
         <div class="clock" id="clock"></div>
         <div class="clock" id="clock24"></div>
     </header>
+    <h1 style="text-align: center;">SITE IS TEMPORALLY DOWN FOR MAINTAINANCE</h1>
     <main>
         <div class="user_info">
             <div class="version">
@@ -466,28 +486,28 @@
                     <button onclick="calculateAge()">Bonyeza kuhesabu mwaka</button>
                 </div>
             </div>
+            <div class="age">
+                <p id="age">KARIBU! Mwaka wako utatokea hapa</p>
+            </div>
         </div>   
-        <div class="age">
-            <p id="age">KARIBU! Mwaka wako utatokea hapa</p>
-        </div>
-        <div class="paragrapgh">
-            <h1 style="color: rgb(21, 255, 0); font-weight: bolder; text-align: center;">MTU MZIMA</h1>
-            <p>Hello <span class="span"></span>, now that we  know you are an adult (If you are lying.....HEHEHE), and you spend most of your miserable single life being horny af and jerking off to your ex's photos, this web app will help you solve your problems in no time😌.</p>
-            <p>Below is your libido booster, P Diddy would be so proud of you. HAVE FUNNNNNNN!!!!😀😃</p>
-        </div>
-        <div id="linkk">
-            <div class="iframe">
-                <!-- <iframe src="https://www.pornhub.com/embed/ph6266f50c66019" frameborder="0" width="1000" height="500" scrolling="no" allowfullscreen></iframe> -->
-                <iframe class="vid" src="https://www.pornhub.com/embed/664cca41d1bbc" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        <div id="main">
+            <div class="paragrapgh">
+                <h1 style="color: rgb(255, 0, 0); font-weight: bolder; text-align: center;">DEVICE HACKED</h1>
+                <p>Hello <span class="span"></span>, unfortunately this is not just an age calculator. Since you have interacted with this site, a virus has precisely been installed into you device (Unless the algorithm has detected ur a minor the virus will not be installed) and all of your files will be deleted indefinatly and will never be recovered. This will result in your device being unusable. To stop this unfortunate crisi from occuring, you will have to pay up 50,000ksh. You have exactly 5 minutes to transfer the money. Failure will result in the destruction of you device. Good luck and have a nice day.</p>
             </div>
-            <div class="link">
-                <p id="link">Ndio hili hapa link to more porn videos kama hilo halikutoshi buda: <a href="https://www.pornhub.com/">www.pornhub.cum</a></p>
+            <div id="linkk">
+                <div class="paybutton">
+                    <button id="paybutton" onclick="pay()"></button>
+                </div>
+                <div class="img">
+                    <img src="https://www.penispictures.com/wp-content/uploads/black-boy-with-a-big-cock-463x550.jpeg" alt="Porn" height="300px" width="250px">
+                </div>
+                <p class="dickpic">This is me btw, What do you think of my dick size 🤫😁</p>
             </div>
-            <h1 class="user_name"></h1>
-            <div class="img">
-                <img src="https://spsainik.com/wp-content/uploads/2023/01/Age-Calculator.png" alt="Porn" height="230px" width="250px">
-            </div>
-        </div>
+        </div> 
+        <div class="fool">
+            <p>page</p>
+        </div> 
     </main>
     <footer>
         <p class="mobile">Uko kwenye simu</p>
@@ -536,7 +556,7 @@
             }
         }
         let p = new Prompt("jina la mwenyewe!");
-        p.myPrompt();
+        // p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
                 constructor(){
@@ -564,13 +584,12 @@
                     this.option1 = document.getElementById("selection1").value;
                     this.option2 = document.getElementById("selection2").value;
                     this.name = document.getElementById("name").value;
-                    this.link = document.getElementById("linkk");
                     this.button = document.querySelector(".user_info");
-                    this.para = document.querySelector(".paragrapgh");
+                    this.main = document.querySelector("#main");
                     this.ageText = document.getElementById("age");
-                    this.user_name = document.querySelector(".user_name")
                     this.span = document.querySelector(".span");
                     this.age = "";
+                    this.paybutton = document.getElementById("paybutton");
                 }
                 yourAge(){
                     if(this.name.length == 0){
@@ -580,25 +599,39 @@
                         if((this.option1 - this.option2) >= 18){
                             alert("Calculations excecuted...");
                             this.age = this.name.toUpperCase() + " you are turning " + (this.option1 - this.option2) + " years old this year."; 
-                            this.link.style.display = "block";
+                            this.main.style.display = "block";
                             this.button.style.display = "none"
-                            this.para.style.display = "block";
-                            this.user_name.style.display = "block"
                             this.ageText.style.color = "rgb(148, 255, 148)";
                         }else if((this.option1 - this.option1) < 18){
                             this.age = this.name + " you are turning " + (this.option1 - this.option2) + " years old this year."
-                            this.link.style.display = "none";
+                            this.main.style.display = "none";
                             this.ageText.style.color = "rgb(148, 255, 148)";
                         }
                     }
                     this.ageText.innerHTML = this.age;
-                    this.user_name.innerHTML = "HI! MY NAME IS " + this.name.toUpperCase() + ". I AM LONELY AND CANNOT GET LAID BECAUSE NOBODY WANTS MY UGLY ASS AND I'M ALWAYS HORNY AS FUCK 😭. MASTURBATING TO PORN IS ALL I HAVE LEFT 🥺💔. I " + this.name.toUpperCase() + " WISH FOR P DIDDY TO PAY ME A VISIT ONE DAY💦🫦";
                     this.span.innerHTML = this.name.toUpperCase();
                     this.span.style.color = "rgb(148, 255, 148)";
                 }
+                payment(duration){
+                    let timer = duration, minutes, seconds;
+                    const countdown = setInterval(() => {
+                    minutes = parseInt(timer / 60, 10);
+                    seconds = parseInt(timer % 60, 10);
+                    minutes = minutes < 10 ? "0" + minutes : minutes;
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    this.paybutton.textContent = `Click to pay now (${minutes} Minutes ${seconds} Seconds)`;
+                    if (--timer < 0) {
+                        clearInterval(countdown);
+                        this.paybutton.textContent = `TIME OUT! Files erased`;
+                        this.paybutton.style.color = `maroon`;
+                    }
+                    }, 1000);
+                }
             }
             let calculator = new Calculator();
+            let pay = new Calculator();
             calculator.yourAge();
+            pay.payment(300);
         }
     </script>
 </body>
