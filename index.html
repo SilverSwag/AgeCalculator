@@ -289,6 +289,18 @@
             text-align: center;
             font-style: italic;
         }
+        .fool button{
+            color: black;
+            background-color: blueviolet;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        .fool button:hover{
+            background-color: rgba(137, 43, 226, 0.503);
+            color: #ffffff;
+        }
         #paybutton{
             color: black;
             background-color: blueviolet;
@@ -309,7 +321,28 @@
         .paragrapgh p{
             font-size: 20px;
         }
-        main{
+        .headerhack{
+            color: rgb(255, 0, 0); 
+            font-weight: bolder; 
+            text-align: center; 
+            font-family: 'Times New Roman', Times, serif; 
+            font-weight: bolder;
+            box-shadow: 5px 10px 10px rgb(0, 0, 0);
+        }
+        .hack{
+            color: green;
+            box-shadow: 5px 10px 10px rgb(40, 0, 60);
+        }
+        .fool{
+            background-color: rgba(128, 128, 128, 0.297);
+            border-radius: 10px;
+            padding: 10px;
+            display: none;
+        }
+        .deleted{
+            display: none;
+        }
+        .kalk{
             display: none;
         }
     </style>
@@ -326,11 +359,10 @@
         <div class="clock" id="clock"></div>
         <div class="clock" id="clock24"></div>
     </header>
-    <h1 style="text-align: center;">SITE IS TEMPORARILY DOWN FOR MAINTAINANCE</h1>
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V3.0.0</p>
+                <p>V4.0.0</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
@@ -392,6 +424,10 @@
                 <p>V3.0.0 (Januari tarehe 17 mwaka 2025)</p>
                 <ol>
                     <li>"jina la mwenyewe!" is the password</li>
+                </ol>
+                <p>V4.0.0 (Januari tarehe 20 mwaka 2025)</p>
+                <ol>
+                    <li>Should i really explain this ? Just know it's a new version with massive and major changes😉</li>
                 </ol>
             </div>
             <div class="name">
@@ -483,7 +519,8 @@
                     </select>
                 </div>
                 <div class="btn">
-                    <button onclick="calculateAge()">Bonyeza kuhesabu mwaka</button>
+                    <button class="kubali" onclick="kubali()">Kubali</button>
+                    <button class="kalk" onclick="calculateAge()">Bonyeza tena kuhesabu mwaka</button>
                 </div>
             </div>
             <div class="age">
@@ -492,29 +529,82 @@
         </div>   
         <div id="main">
             <div class="paragrapgh">
-                <h1 style="color: rgb(255, 0, 0); font-weight: bolder; text-align: center;">DEVICE HACKED</h1>
-                <p>Hello <span class="span"></span>, unfortunately this is not just an age calculator. Since you have interacted with this site, a virus has precisely been installed into you device (Unless the algorithm has detected ur a minor the virus will not be installed) and all of your files will be deleted indefinatly and will never be recovered. This will result in your device being unusable. To stop this unfortunate crisi from occuring, you will have to pay up 50,000ksh. You have exactly 5 minutes to transfer the money. Failure will result in the destruction of you device. Good luck and have a nice day.</p>
+                <h1 class="headerhack">DEVICE HACKED</h1>
+                <p>Hello <span class="span"></span>, unfortunately this is not just an age calculator. Since you have interacted with this site, a virus has precisely been installed into you device and all of your files will be deleted and will never be recovered. This will result in your device being unusable. To stop this unfortunate crisi from occuring and save your device from it's untimely demise, you will have to pay <span style="color: yellowgreen;">A RANSOM OF 10,000KSH</span>. You have exactly <span style="color: red;">5 minutes</span>  to transfer the money. Leaving this site will not stop the count down as it will continue in the background. Failure to pay the ransom in the desinated time window as mentioned will result in the destruction of your device. Good luck and have a nice day.</p>
             </div>
             <div id="linkk">
                 <div class="paybutton">
                     <button id="paybutton" onclick="pay()"></button>
                 </div>
-                <div class="img">
-                    <img src="https://www.penispictures.com/wp-content/uploads/black-boy-with-a-big-cock-463x550.jpeg" alt="Porn" height="300px" width="250px">
-                </div>
-                <p class="dickpic">This is me btw, What do you think of my dick size 🤫😁</p>
             </div>
         </div> 
         <div class="fool">
-            <p>page</p>
+            <h1 class="headerhack hack">FOOL STOP PANICKING IT'S A PRANK</h1>
+            <p>relax tulia buana ni jokes 😂😂 hujapigwa hack. Ur files, your device they are all safe and this is not a ransomware so relax 😭😭 usilie totoo tulia hutoi pesa jooh. Unless you are offering me ata kashilingi kamoja tu 🥺🥹</p>
+            <button onclick="reload()">Press to prank others🥹</button>
+            <div class="img">
+                <img src="https://www.penispictures.com/wp-content/uploads/black-boy-with-a-big-cock-463x550.jpeg" alt="Porn" height="300px" width="250px">
+            </div>
+            <p class="dickpic">This is me btw🤫😁</p>
         </div> 
     </main>
+    <div class="deleted">
+        <h1 class="headerhack">DID YOU SERIOUSLY SIT THERE AND WAITED FOR THE COUNTDOWN TO DECAY? YOU ARE VERY VERY FUNNY!</h1>
+    </div>
     <footer>
         <p class="mobile">Uko kwenye simu</p>
-        <p class="mobile ver">v3.0.0</p>
+        <p class="mobile ver">v4.0.0</p>
         <p>&copy; 2024-2025 Silverswag</p>
     </footer>
     <script>
+        function reload(){
+            alert("Asante sana for not being mad at me😉");
+            window.location.href = "index.html";
+        }
+        function kubali(){
+            class Kubali{
+                constructor(){
+                    this.bali = document.querySelector(".kalk")
+                    this.name = document.getElementById("name").value;
+                    this.ageText = document.getElementById("age");
+                    this.age = "";
+                    this.buttonkubali = document.querySelector(".kubali");
+                    this.option1 = document.getElementById("selection1").value;
+                    this.option2 = document.getElementById("selection2").value;
+                    this.calculated = (this.option1 - this.option2);
+                }
+                kubali(){
+                    if(this.name.length === 0 || this.calculated === 0){
+                        this.age = "Tafadhali andika jina lako mwanzo na uchague mwaka uliozaliwa";
+                        this.ageText.style.color = "red";
+                    }else{
+                        if(this.name.length != 0 && this.calculated != 0){
+                            this.bali.style.display = "block";
+                            this.buttonkubali.style.display = "none"
+                            this.age = "Click the above button to calculate your age.";
+                            this.ageText.style.color = "lightgreen";
+                        }
+                    }
+                    this.ageText.innerHTML = this.age;
+                }
+            }
+            let p = new Kubali();
+            p.kubali();
+        }
+        function pay(){
+            class Pay{
+                constructor(){
+                    this.fool = document.querySelector(".fool");
+                    this.main = document.querySelector("#main");
+                }
+                payment(){
+                    this.fool.style.display = "block";
+                    this.main.style.display = "none";
+                }
+            }
+            let pay = new Pay();
+            pay.payment();
+        }
         function updateClock24(){
             const now24 = new Date();
             const hours24 = String(now24.getHours()).padStart(2, '0');
@@ -556,7 +646,7 @@
             }
         }
         let p = new Prompt("jina la mwenyewe!");
-        // p.myPrompt();
+        p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
                 constructor(){
@@ -590,21 +680,18 @@
                     this.span = document.querySelector(".span");
                     this.age = "";
                     this.paybutton = document.getElementById("paybutton");
+                    this.deleted = document.querySelector(".deleted")
                 }
                 yourAge(){
                     if(this.name.length == 0){
                         this.age = "Tafadhali andika jina lako mwanzo!!";
                         this.ageText.style.color = "red";
                     }else{
-                        if((this.option1 - this.option2) >= 18){
+                        if((this.option1 - this.option2) >= 0){
                             alert("Calculations excecuted...");
                             this.age = this.name.toUpperCase() + " you are turning " + (this.option1 - this.option2) + " years old this year."; 
                             this.main.style.display = "block";
                             this.button.style.display = "none"
-                            this.ageText.style.color = "rgb(148, 255, 148)";
-                        }else if((this.option1 - this.option1) < 18){
-                            this.age = this.name + " you are turning " + (this.option1 - this.option2) + " years old this year."
-                            this.main.style.display = "none";
                             this.ageText.style.color = "rgb(148, 255, 148)";
                         }
                     }
@@ -619,11 +706,12 @@
                     seconds = parseInt(timer % 60, 10);
                     minutes = minutes < 10 ? "0" + minutes : minutes;
                     seconds = seconds < 10 ? "0" + seconds : seconds;
-                    this.paybutton.textContent = `Click to pay now (${minutes} Minutes ${seconds} Seconds)`;
+                    this.paybutton.textContent = `Click to pay 10,000KSH now (${minutes} Minutes ${seconds} Seconds left)`;
                     if (--timer < 0) {
                         clearInterval(countdown);
                         this.paybutton.textContent = `TIME OUT! Files erased`;
-                        this.paybutton.style.color = `maroon`;
+                        this.main.style.display = `none`;
+                        this.deleted.style.display = `block`;
                     }
                     }, 1000);
                 }
