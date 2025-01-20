@@ -572,6 +572,8 @@
                     this.option1 = document.getElementById("selection1").value;
                     this.option2 = document.getElementById("selection2").value;
                     this.calculated = (this.option1 - this.option2);
+                    this.selection = document.querySelector(".selection")
+                    this.namedisplay = document.querySelector(".name");
                 }
                 kubali(){
                     if(this.name.length === 0 || this.calculated === 0){
@@ -583,6 +585,8 @@
                             this.buttonkubali.style.display = "none"
                             this.age = "Click the above button to calculate your age.";
                             this.ageText.style.color = "lightgreen";
+                            this.selection.style.display = "none";
+                            this.namedisplay.style.display = "none";
                         }
                     }
                     this.ageText.innerHTML = this.age;
