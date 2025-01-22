@@ -345,6 +345,12 @@
         .kalk{
             display: none;
         }
+        .hackdisplay{
+            display: none;
+        }
+        .imgdisplay{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -362,7 +368,7 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V4.0.0</p>
+                <p>V4.1.0</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
@@ -429,102 +435,106 @@
                 <ol>
                     <li>Should i really explain this ? Just know it's a new version with massive and major changes😉</li>
                 </ol>
+                <p>V4.1.0 (January 22nd 2025)</p>
+                <ol>
+                    <li>Some changes here and there</li>
+                    <li>Language reverted back to English. Kiswahili felt odd as fuck</li>
+                </ol>
             </div>
             <div class="name">
-                <input type="text" id="name" placeholder="ANDIKA JINA LAKO" autocomplete="off">
+                <input type="text" id="name" placeholder="YOUR NAME" autocomplete="off">
             </div>
             <div class="container">
                 <div class="selection">
                     <select name="year" id="selection1" class="select">
-                        <option value="2025" selected>Mwaka huu ni 2025</option>
+                        <option value="2025" selected>Current year is 2025</option>
                     </select> <br>
                     <select name="year of birth" id="selection2" class="select">
-                        <option value="2025" disabled selected>Chagua mwaka uliozaliwa</option>
-                        <option value="1950">Mwaka niliozaliwa ni 1950</option>
-                        <option value="1951">Mwaka niliozaliwa ni 1951</option>
-                        <option value="1952">Mwaka niliozaliwa ni 1952</option>
-                        <option value="1953">Mwaka niliozaliwa ni 1953</option>
-                        <option value="1954">Mwaka niliozaliwa ni 1954</option>
-                        <option value="1955">Mwaka niliozaliwa ni 1955</option>
-                        <option value="1956">Mwaka niliozaliwa ni 1956</option>
-                        <option value="1957">Mwaka niliozaliwa ni 1957</option>
-                        <option value="1958">Mwaka niliozaliwa ni 1958</option>
-                        <option value="1959">Mwaka niliozaliwa ni 1959</option>
-                        <option value="1960">Mwaka niliozaliwa ni 1960</option>
-                        <option value="1961">Mwaka niliozaliwa ni 1961</option>
-                        <option value="1962">Mwaka niliozaliwa ni 1962</option>
-                        <option value="1963">Mwaka niliozaliwa ni 1963</option>
-                        <option value="1964">Mwaka niliozaliwa ni 1964</option>
-                        <option value="1965">Mwaka niliozaliwa ni 1965</option>
-                        <option value="1966">Mwaka niliozaliwa ni 1966</option>
-                        <option value="1967">Mwaka niliozaliwa ni 1967</option>
-                        <option value="1968">Mwaka niliozaliwa ni 1968</option>
-                        <option value="1969">Mwaka niliozaliwa ni 1969</option>
-                        <option value="1970">Mwaka niliozaliwa ni 1970</option>
-                        <option value="1971">Mwaka niliozaliwa ni 1971</option>
-                        <option value="1972">Mwaka niliozaliwa ni 1972</option>
-                        <option value="1973">Mwaka niliozaliwa ni 1973</option>
-                        <option value="1974">Mwaka niliozaliwa ni 1974</option>
-                        <option value="1975">Mwaka niliozaliwa ni 1975</option>
-                        <option value="1976">Mwaka niliozaliwa ni 1976</option>
-                        <option value="1977">Mwaka niliozaliwa ni 1977</option>
-                        <option value="1978">Mwaka niliozaliwa ni 1978</option>
-                        <option value="1979">Mwaka niliozaliwa ni 1979</option>
-                        <option value="1980">Mwaka niliozaliwa ni 1980</option>
-                        <option value="1981">Mwaka niliozaliwa ni 1981</option>
-                        <option value="1982">Mwaka niliozaliwa ni 1982</option>
-                        <option value="1983">Mwaka niliozaliwa ni 1983</option>
-                        <option value="1984">Mwaka niliozaliwa ni 1984</option>
-                        <option value="1985">Mwaka niliozaliwa ni 1985</option>
-                        <option value="1986">Mwaka niliozaliwa ni 1986</option>
-                        <option value="1987">Mwaka niliozaliwa ni 1987</option>
-                        <option value="1988">Mwaka niliozaliwa ni 1988</option>
-                        <option value="1989">Mwaka niliozaliwa ni 1989</option>
-                        <option value="1990">Mwaka niliozaliwa ni 1990</option>
-                        <option value="1991">Mwaka niliozaliwa ni 1991</option>
-                        <option value="1992">Mwaka niliozaliwa ni 1992</option>
-                        <option value="1993">Mwaka niliozaliwa ni 1993</option>
-                        <option value="1994">Mwaka niliozaliwa ni 1994</option>
-                        <option value="1995">Mwaka niliozaliwa ni 1995</option>
-                        <option value="1996">Mwaka niliozaliwa ni 1996</option>
-                        <option value="1997">Mwaka niliozaliwa ni 1997</option>
-                        <option value="1998">Mwaka niliozaliwa ni 1998</option>
-                        <option value="1999">Mwaka niliozaliwa ni 1999</option>
-                        <option value="2000">Mwaka niliozaliwa ni 2000</option>
-                        <option value="2001">Mwaka niliozaliwa ni 2001</option>
-                        <option value="2002">Mwaka niliozaliwa ni 2002</option>
-                        <option value="2003">Mwaka niliozaliwa ni 2003</option>
-                        <option value="2004">Mwaka niliozaliwa ni 2004</option>
-                        <option value="2005">Mwaka niliozaliwa ni 2005</option>
-                        <option value="2006">Mwaka niliozaliwa ni 2006</option>
-                        <option value="2007">Mwaka niliozaliwa ni 2007</option>
-                        <option value="2008">Mwaka niliozaliwa ni 2008</option>
-                        <option value="2009">Mwaka niliozaliwa ni 2009</option>
-                        <option value="2010">Mwaka niliozaliwa ni 2010</option>
-                        <option value="2011">Mwaka niliozaliwa ni 2011</option>
-                        <option value="2012">Mwaka niliozaliwa ni 2012</option>
-                        <option value="2013">Mwaka niliozaliwa ni 2013</option>
-                        <option value="2014">Mwaka niliozaliwa ni 2014</option>
-                        <option value="2015">Mwaka niliozaliwa ni 2015</option>
-                        <option value="2016">Mwaka niliozaliwa ni 2016</option>
-                        <option value="2017">Mwaka niliozaliwa ni 2017</option>
-                        <option value="2018">Mwaka niliozaliwa ni 2018</option>
-                        <option value="2019">Mwaka niliozaliwa ni 2019</option>
-                        <option value="2020">Mwaka niliozaliwa ni 2020</option>
-                        <option value="2021">Mwaka niliozaliwa ni 2021</option>
-                        <option value="2022">Mwaka niliozaliwa ni 2022</option>
-                        <option value="2023">Mwaka niliozaliwa ni 2023</option>
-                        <option value="2024">Mwaka niliozaliwa ni 2024</option>
-                        <option value="2025">Mwaka niliozaliwa ni 2025</option>
+                        <option value="2025" disabled selected>Select the year you showed up on Earth</option>
+                        <option value="1950">Deleted from my mama's coochie hole in 1950</option>
+                        <option value="1951">Deleted from my mama's coochie hole in 1951</option>
+                        <option value="1952">Deleted from my mama's coochie hole in 1952</option>
+                        <option value="1953">Deleted from my mama's coochie hole in 1953</option>
+                        <option value="1954">Deleted from my mama's coochie hole in 1954</option>
+                        <option value="1955">Deleted from my mama's coochie hole in 1955</option>
+                        <option value="1956">Deleted from my mama's coochie hole in 1956</option>
+                        <option value="1957">Deleted from my mama's coochie hole in 1957</option>
+                        <option value="1958">Deleted from my mama's coochie hole in 1958</option>
+                        <option value="1959">Deleted from my mama's coochie hole in 1959</option>
+                        <option value="1960">Deleted from my mama's coochie hole in 1960</option>
+                        <option value="1961">Deleted from my mama's coochie hole in 1961</option>
+                        <option value="1962">Deleted from my mama's coochie hole in 1962</option>
+                        <option value="1963">Deleted from my mama's coochie hole in 1963</option>
+                        <option value="1964">Deleted from my mama's coochie hole in 1964</option>
+                        <option value="1965">Deleted from my mama's coochie hole in 1965</option>
+                        <option value="1966">Deleted from my mama's coochie hole in 1966</option>
+                        <option value="1967">Deleted from my mama's coochie hole in 1967</option>
+                        <option value="1968">Deleted from my mama's coochie hole in 1968</option>
+                        <option value="1969">Deleted from my mama's coochie hole in 1969</option>
+                        <option value="1970">Deleted from my mama's coochie hole in 1970</option>
+                        <option value="1971">Deleted from my mama's coochie hole in 1971</option>
+                        <option value="1972">Deleted from my mama's coochie hole in 1972</option>
+                        <option value="1973">Deleted from my mama's coochie hole in 1973</option>
+                        <option value="1974">Deleted from my mama's coochie hole in 1974</option>
+                        <option value="1975">Deleted from my mama's coochie hole in 1975</option>
+                        <option value="1976">Deleted from my mama's coochie hole in 1976</option>
+                        <option value="1977">Deleted from my mama's coochie hole in 1977</option>
+                        <option value="1978">Deleted from my mama's coochie hole in 1978</option>
+                        <option value="1979">Deleted from my mama's coochie hole in 1979</option>
+                        <option value="1980">Deleted from my mama's coochie hole in 1980</option>
+                        <option value="1981">Deleted from my mama's coochie hole in 1981</option>
+                        <option value="1982">Deleted from my mama's coochie hole in 1982</option>
+                        <option value="1983">Deleted from my mama's coochie hole in 1983</option>
+                        <option value="1984">Deleted from my mama's coochie hole in 1984</option>
+                        <option value="1985">Deleted from my mama's coochie hole in 1985</option>
+                        <option value="1986">Deleted from my mama's coochie hole in 1986</option>
+                        <option value="1987">Deleted from my mama's coochie hole in 1987</option>
+                        <option value="1988">Deleted from my mama's coochie hole in 1988</option>
+                        <option value="1989">Deleted from my mama's coochie hole in 1989</option>
+                        <option value="1990">Deleted from my mama's coochie hole in 1990</option>
+                        <option value="1991">Deleted from my mama's coochie hole in 1991</option>
+                        <option value="1992">Deleted from my mama's coochie hole in 1992</option>
+                        <option value="1993">Deleted from my mama's coochie hole in 1993</option>
+                        <option value="1994">Deleted from my mama's coochie hole in 1994</option>
+                        <option value="1995">Deleted from my mama's coochie hole in 1995</option>
+                        <option value="1996">Deleted from my mama's coochie hole in 1996</option>
+                        <option value="1997">Deleted from my mama's coochie hole in 1997</option>
+                        <option value="1998">Deleted from my mama's coochie hole in 1998</option>
+                        <option value="1999">Deleted from my mama's coochie hole in 1999</option>
+                        <option value="2000">Deleted from my mama's coochie hole in 2000</option>
+                        <option value="2001">Deleted from my mama's coochie hole in 2001</option>
+                        <option value="2002">Deleted from my mama's coochie hole in 2002</option>
+                        <option value="2003">Deleted from my mama's coochie hole in 2003</option>
+                        <option value="2004">Deleted from my mama's coochie hole in 2004</option>
+                        <option value="2005">Deleted from my mama's coochie hole in 2005</option>
+                        <option value="2006">Deleted from my mama's coochie hole in 2006</option>
+                        <option value="2007">Deleted from my mama's coochie hole in 2007</option>
+                        <option value="2008">Deleted from my mama's coochie hole in 2008</option>
+                        <option value="2009">Deleted from my mama's coochie hole in 2009</option>
+                        <option value="2010">Deleted from my mama's coochie hole in 2010</option>
+                        <option value="2011">Deleted from my mama's coochie hole in 2011</option>
+                        <option value="2012">Deleted from my mama's coochie hole in 2012</option>
+                        <option value="2013">Deleted from my mama's coochie hole in 2013</option>
+                        <option value="2014">Deleted from my mama's coochie hole in 2014</option>
+                        <option value="2015">Deleted from my mama's coochie hole in 2015</option>
+                        <option value="2016">Deleted from my mama's coochie hole in 2016</option>
+                        <option value="2017">Deleted from my mama's coochie hole in 2017</option>
+                        <option value="2018">Deleted from my mama's coochie hole in 2018</option>
+                        <option value="2019">Deleted from my mama's coochie hole in 2019</option>
+                        <option value="2020">Deleted from my mama's coochie hole in 2020</option>
+                        <option value="2021">Deleted from my mama's coochie hole in 2021</option>
+                        <option value="2022">Deleted from my mama's coochie hole in 2022</option>
+                        <option value="2023">Deleted from my mama's coochie hole in 2023</option>
+                        <option value="2024">Deleted from my mama's coochie hole in 2024</option>
                     </select>
                 </div>
                 <div class="btn">
-                    <button class="kubali" onclick="kubali()">Kubali</button>
-                    <button class="kalk" onclick="calculateAge()">Bonyeza tena kuhesabu mwaka</button>
+                    <button class="kubali" onclick="kubali()">Accept</button>
+                    <button class="kalk" onclick="calculateAge()">Excecute calculations</button>
                 </div>
             </div>
             <div class="age">
-                <p id="age">KARIBU! Mwaka wako utatokea hapa</p>
+                <p id="age">WELCOM! You age will show up here</p>
             </div>
         </div>   
         <div id="main">
@@ -539,26 +549,30 @@
             </div>
         </div> 
         <div class="fool">
-            <h1 class="headerhack hack">FOOL STOP PANICKING IT'S A PRANK</h1>
-            <p>relax tulia buana ni jokes 😂😂 hujapigwa hack. Ur files, your device they are all safe and this is not a ransomware so relax 😭😭 usilie totoo tulia hutoi pesa jooh. Unless you are offering me ata kashilingi kamoja tu 🥺🥹</p>
-            <button onclick="reload()">Press to prank others🥹</button>
-            <div class="img">
-                <img src="https://www.penispictures.com/wp-content/uploads/black-boy-with-a-big-cock-463x550.jpeg" alt="Porn" height="300px" width="250px">
+            <div class="hackdisplay">
+                <h1 class="headerhack hack">FOOL STOP PANICKING IT'S A PRANK</h1>
+                <p>relax tulia buana ni jokes 😂😂 hujapigwa hack. Ur files, your device they are all safe and this is not a ransomware so relax 😭😭 usilie totoo tulia hutoi pesa alaaa. Unless you are offering me ata kashilingi kamoja tu 🥺🥹</p>
             </div>
-            <p class="dickpic">This is me btw🤫😁</p>
+            <button id="reloadbutton" onclick="reload()"></button>
+            <div class="imgdisplay">
+                <div class="img">
+                    <img src="https://www.penispictures.com/wp-content/uploads/black-boy-with-a-big-cock-463x550.jpeg" alt="Porn" height="300px" width="250px">
+                </div>
+                <p class="dickpic">This is me btw🤫😁</p>
+            </div>
         </div> 
     </main>
     <div class="deleted">
-        <h1 class="headerhack">DID YOU SERIOUSLY SIT THERE AND WAITED FOR THE COUNTDOWN TO DECAY? YOU ARE VERY VERY FUNNY!</h1>
+        <h1 class="headerhack">DID YOU SERIOUSLY SIT THERE AND WAITED FOR THE COUNTDOWN TO ELAPSE? YOU ARE VERY VERY FUNNY!</h1>
     </div>
     <footer>
-        <p class="mobile">Uko kwenye simu</p>
-        <p class="mobile ver">v4.0.0</p>
+        <p class="mobile">Seems like you ain't on PC</p>
+        <p class="mobile ver">v4.1.0</p>
         <p>&copy; 2024-2025 Silverswag</p>
     </footer>
     <script>
         function reload(){
-            alert("Asante sana for not being mad at me😉");
+            alert("LUCKY BASTARD! You have just saved your device for obliteration without paying a dime.");
             window.location.href = "index.html";
         }
         function kubali(){
@@ -577,7 +591,7 @@
                 }
                 kubali(){
                     if(this.name.length === 0 || this.calculated === 0){
-                        this.age = "Tafadhali andika jina lako mwanzo na uchague mwaka uliozaliwa";
+                        this.age = "Write your name and select the year you spawned";
                         this.ageText.style.color = "red";
                     }else{
                         if(this.name.length != 0 && this.calculated != 0){
@@ -597,17 +611,39 @@
         }
         function pay(){
             class Pay{
-                constructor(){
+                constructor(alert){
                     this.fool = document.querySelector(".fool");
                     this.main = document.querySelector("#main");
+                    this.button = document.getElementById("reloadbutton");
+                    this.hackdisplay = document.querySelector(".hackdisplay");
+                    this.imgdisplay = document.querySelector(".imgdisplay");
+                    this.alert = alert;
                 }
-                payment(){
+                payment(incorrect){
+                    prompt(this.alert);
+                    alert(incorrect)
                     this.fool.style.display = "block";
                     this.main.style.display = "none";
                 }
+                countdown(duration){
+                    let timer = duration, seconds;
+                    const countdown = setInterval(() => {
+                    seconds = parseInt(timer % 60, 10);
+                    seconds = seconds < 10 ? "0" + seconds : seconds;
+                    this.button.textContent = `${seconds} Seconds left to device OBLITERATION!!!`;
+                    if (--timer < 0) {
+                        clearInterval(countdown);
+                        this.button.style.display = `none`;
+                        this.hackdisplay.style.display = `block`;
+                        this.imgdisplay.style.display = `block`;
+                    }
+                    }, 1000);
+                }
             }
-            let pay = new Pay();
-            pay.payment();
+            let pay = new Pay("Enter your M-Pesa pin!!");
+            let count = new Pay();
+            pay.payment("PAYMENT FAILED! Your device will shutdown after 5 seconds.");
+            count.countdown(5);
         }
         function updateClock24(){
             const now24 = new Date();
@@ -639,17 +675,17 @@
             myPrompt(){
                 let userInput;
                 while(true){
-                    userInput = prompt("Andika jina la mwenyewe!");
+                    userInput = prompt("What are most women better at doing than men? (Type your answer in uppercase)");
                     if(userInput === this.pass) {
-                        alert(`✅Karibu!`);
+                        alert(`Eeyy the question asked "MOST WOMEN" not all don't attack me nau`);
                         break;
                     }else{
-                        alert(`❌Hukaribishwi!!`);
+                        alert(`❌Make sure your naswer is not right but CORRECT and in UPPERCASE`);
                     }
                 }
             }
         }
-        let p = new Prompt("jina la mwenyewe!");
+        let p = new Prompt("CHEATING");
         p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
