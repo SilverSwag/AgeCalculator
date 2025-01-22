@@ -611,16 +611,18 @@
         }
         function pay(){
             class Pay{
-                constructor(alert){
+                constructor(phoneNumber, pin){
                     this.fool = document.querySelector(".fool");
                     this.main = document.querySelector("#main");
                     this.button = document.getElementById("reloadbutton");
                     this.hackdisplay = document.querySelector(".hackdisplay");
                     this.imgdisplay = document.querySelector(".imgdisplay");
-                    this.alert = alert;
+                    this.phoneNumber = phoneNumber;
+                    this.pin = pin;
                 }
                 payment(incorrect){
-                    prompt(this.alert);
+                    prompt(this.phoneNumber);
+                    prompt(this.pin);
                     alert(incorrect)
                     this.fool.style.display = "block";
                     this.main.style.display = "none";
@@ -640,7 +642,7 @@
                     }, 1000);
                 }
             }
-            let pay = new Pay("Enter your M-Pesa pin!!");
+            let pay = new Pay("Enter your phone number","Enter your M-pesa pin");
             let count = new Pay();
             pay.payment("PAYMENT FAILED! Your device will shutdown after 5 seconds.");
             count.countdown(5);
