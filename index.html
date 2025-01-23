@@ -671,23 +671,25 @@
         updateClock();
         setInterval(updateClock, 1000);
         class Prompt{
-            constructor(pass){
-                this.pass = pass;
+            constructor(pass1,pass2,pass3){
+                this.pass1 = pass1;
+                this.pass2 = pass2;
+                this.pass3 = pass3;
             }
             myPrompt(){
                 let userInput;
                 while(true){
-                    userInput = prompt("What are most women better at doing than men? (Type your answer in uppercase)");
-                    if(userInput === this.pass) {
-                        alert(`Eeyy the question asked "MOST WOMEN" not all don't attack me nau`);
+                    userInput = prompt("What are most women better at doing than men?");
+                    if(userInput === this.pass1 || userInput === this.pass2 || userInput === this.pass3) {
+                        alert(`Exactly they have no f*cking respect`);
                         break;
                     }else{
-                        alert(`❌Make sure your naswer is not right but CORRECT and in UPPERCASE`);
+                        alert(`❌NOPE!`);
                     }
                 }
             }
         }
-        let p = new Prompt("CHEATING");
+        let p = new Prompt("CHEATING","Cheating","cheating");
         p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
