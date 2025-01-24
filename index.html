@@ -151,9 +151,6 @@
             .select{
                 text-align: center;
             }
-            .paragrapgh p{
-                text-align: center;
-            }
             .name input{
                 color: rgb(255, 255, 255);
                 background-color: rgb(0, 0, 0);
@@ -254,7 +251,6 @@
             font-family: 'Times New Roman', Times, serif;
             font-style: oblique;
             color: rgb(0, 0, 0);
-            text-decoration: underline;
             font-size: 20px;
         }
         .notes ol li{
@@ -314,9 +310,15 @@
             color: #ffffff;
         }
         .paybutton{
+            padding: 20px;
             display: flex;
             justify-content: center;
-            padding: 20px;
+        }
+        .time{
+            text-align: center;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
         }
         .paragrapgh p{
             font-size: 20px;
@@ -351,6 +353,13 @@
         .imgdisplay{
             display: none;
         }
+        .laughbutton{
+            text-align: center;
+        }
+        .laughingcat{
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -368,77 +377,14 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V4.1.0</p>
+                <p>V4.2.0</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
-                <p>V1.0 (August 3rd 2024)</p>
+                <p>Version update 4.2.0 (01/24/2025)</p>
                 <ol>
-                    <li>Software imetengenezwa na chuki za Ian 😌</li>
-                </ol>
-                <p>V1.1 (August 11th 2024)</p>
-                <ol>
-                    <li>New background look.</li>
-                    <li>Animations added.</li>
-                    <li>New color to the button, name input field and dropdowns.</li>
-                    <li>Now you are able to view update/release notes for this software</li>
-                    <li>The nonsense prank of spyware has been removed</li>
-                    <li>User now needs to find the security pin to use this software</li>
-                </ol>
-                <p>V1.2 (August 12th 2024)</p>
-                <ol>
-                    <li>Changed the alert text</li>
-                </ol>
-                <p>V1.3 (November 11th 2024)</p>
-                <ol>
-                    <li>Small changes to the mobile version user interface</li>
-                </ol>
-                <p>V1.4 (November 20th 2024)</p>
-                <ol>
-                    <li>Made the pin ever harder to guess 😀😎</li>
-                </ol>
-                <p>V2.0 (December 18th 2024)</p>
-                <ol>
-                    <li>Major changes to pin input UI.</li>
-                </ol>
-                <p>V2.0.1 (December 21st 2024)</p>
-                <ol>
-                    <li>Fixed some errors</li>
-                </ol>
-                <p>V2.0.2 (December 22nd 2024)</p>
-                <ol>
-                    <li>Minor changes</li>
-                </ol>
-                <p>V2.1.0 (December 27th 2024)</p>
-                <ol>
-                    <li>Local Time added</li>
-                    <li>Minor UI changes</li>
-                </ol>
-                <p>V2.2.0 (December 28th 2024)</p>
-                <ol>
-                    <li>2025 update</li>
-                </ol>
-                <p>V2.2.1 (December 30th 2024)</p>
-                <ol>
-                    <li>Local Time 12 hour system added for those who can't read the 24 hour system 🥺🙄</li>
-                </ol>
-                <p>V2.3 (Januari tarehe 14 mwaka 2025)</p>
-                <ol>
-                    <li>Kiswahili kidogo imeongezwa 🥴</li>
-                    <li>Alafu hiyo pin hehehe ukikosea wewe ni fala</li>
-                </ol>
-                <p>V3.0.0 (Januari tarehe 17 mwaka 2025)</p>
-                <ol>
-                    <li>"jina la mwenyewe!" is the password</li>
-                </ol>
-                <p>V4.0.0 (Januari tarehe 20 mwaka 2025)</p>
-                <ol>
-                    <li>Should i really explain this ? Just know it's a new version with massive and major changes😉</li>
-                </ol>
-                <p>V4.1.0 (January 22nd 2025)</p>
-                <ol>
-                    <li>Some changes here and there</li>
-                    <li>Language reverted back to English. Kiswahili felt odd as fuck</li>
+                    <li>Major changes</li>
+                    <li>User friendlyness is now prioritized</li>
                 </ol>
             </div>
             <div class="name">
@@ -451,81 +397,81 @@
                     </select> <br>
                     <select name="year of birth" id="selection2" class="select">
                         <option value="2025" disabled selected>Select the year you showed up on Earth</option>
-                        <option value="1950">Deleted from my mama's coochie hole in 1950</option>
-                        <option value="1951">Deleted from my mama's coochie hole in 1951</option>
-                        <option value="1952">Deleted from my mama's coochie hole in 1952</option>
-                        <option value="1953">Deleted from my mama's coochie hole in 1953</option>
-                        <option value="1954">Deleted from my mama's coochie hole in 1954</option>
-                        <option value="1955">Deleted from my mama's coochie hole in 1955</option>
-                        <option value="1956">Deleted from my mama's coochie hole in 1956</option>
-                        <option value="1957">Deleted from my mama's coochie hole in 1957</option>
-                        <option value="1958">Deleted from my mama's coochie hole in 1958</option>
-                        <option value="1959">Deleted from my mama's coochie hole in 1959</option>
-                        <option value="1960">Deleted from my mama's coochie hole in 1960</option>
-                        <option value="1961">Deleted from my mama's coochie hole in 1961</option>
-                        <option value="1962">Deleted from my mama's coochie hole in 1962</option>
-                        <option value="1963">Deleted from my mama's coochie hole in 1963</option>
-                        <option value="1964">Deleted from my mama's coochie hole in 1964</option>
-                        <option value="1965">Deleted from my mama's coochie hole in 1965</option>
-                        <option value="1966">Deleted from my mama's coochie hole in 1966</option>
-                        <option value="1967">Deleted from my mama's coochie hole in 1967</option>
-                        <option value="1968">Deleted from my mama's coochie hole in 1968</option>
-                        <option value="1969">Deleted from my mama's coochie hole in 1969</option>
-                        <option value="1970">Deleted from my mama's coochie hole in 1970</option>
-                        <option value="1971">Deleted from my mama's coochie hole in 1971</option>
-                        <option value="1972">Deleted from my mama's coochie hole in 1972</option>
-                        <option value="1973">Deleted from my mama's coochie hole in 1973</option>
-                        <option value="1974">Deleted from my mama's coochie hole in 1974</option>
-                        <option value="1975">Deleted from my mama's coochie hole in 1975</option>
-                        <option value="1976">Deleted from my mama's coochie hole in 1976</option>
-                        <option value="1977">Deleted from my mama's coochie hole in 1977</option>
-                        <option value="1978">Deleted from my mama's coochie hole in 1978</option>
-                        <option value="1979">Deleted from my mama's coochie hole in 1979</option>
-                        <option value="1980">Deleted from my mama's coochie hole in 1980</option>
-                        <option value="1981">Deleted from my mama's coochie hole in 1981</option>
-                        <option value="1982">Deleted from my mama's coochie hole in 1982</option>
-                        <option value="1983">Deleted from my mama's coochie hole in 1983</option>
-                        <option value="1984">Deleted from my mama's coochie hole in 1984</option>
-                        <option value="1985">Deleted from my mama's coochie hole in 1985</option>
-                        <option value="1986">Deleted from my mama's coochie hole in 1986</option>
-                        <option value="1987">Deleted from my mama's coochie hole in 1987</option>
-                        <option value="1988">Deleted from my mama's coochie hole in 1988</option>
-                        <option value="1989">Deleted from my mama's coochie hole in 1989</option>
-                        <option value="1990">Deleted from my mama's coochie hole in 1990</option>
-                        <option value="1991">Deleted from my mama's coochie hole in 1991</option>
-                        <option value="1992">Deleted from my mama's coochie hole in 1992</option>
-                        <option value="1993">Deleted from my mama's coochie hole in 1993</option>
-                        <option value="1994">Deleted from my mama's coochie hole in 1994</option>
-                        <option value="1995">Deleted from my mama's coochie hole in 1995</option>
-                        <option value="1996">Deleted from my mama's coochie hole in 1996</option>
-                        <option value="1997">Deleted from my mama's coochie hole in 1997</option>
-                        <option value="1998">Deleted from my mama's coochie hole in 1998</option>
-                        <option value="1999">Deleted from my mama's coochie hole in 1999</option>
-                        <option value="2000">Deleted from my mama's coochie hole in 2000</option>
-                        <option value="2001">Deleted from my mama's coochie hole in 2001</option>
-                        <option value="2002">Deleted from my mama's coochie hole in 2002</option>
-                        <option value="2003">Deleted from my mama's coochie hole in 2003</option>
-                        <option value="2004">Deleted from my mama's coochie hole in 2004</option>
-                        <option value="2005">Deleted from my mama's coochie hole in 2005</option>
-                        <option value="2006">Deleted from my mama's coochie hole in 2006</option>
-                        <option value="2007">Deleted from my mama's coochie hole in 2007</option>
-                        <option value="2008">Deleted from my mama's coochie hole in 2008</option>
-                        <option value="2009">Deleted from my mama's coochie hole in 2009</option>
-                        <option value="2010">Deleted from my mama's coochie hole in 2010</option>
-                        <option value="2011">Deleted from my mama's coochie hole in 2011</option>
-                        <option value="2012">Deleted from my mama's coochie hole in 2012</option>
-                        <option value="2013">Deleted from my mama's coochie hole in 2013</option>
-                        <option value="2014">Deleted from my mama's coochie hole in 2014</option>
-                        <option value="2015">Deleted from my mama's coochie hole in 2015</option>
-                        <option value="2016">Deleted from my mama's coochie hole in 2016</option>
-                        <option value="2017">Deleted from my mama's coochie hole in 2017</option>
-                        <option value="2018">Deleted from my mama's coochie hole in 2018</option>
-                        <option value="2019">Deleted from my mama's coochie hole in 2019</option>
-                        <option value="2020">Deleted from my mama's coochie hole in 2020</option>
-                        <option value="2021">Deleted from my mama's coochie hole in 2021</option>
-                        <option value="2022">Deleted from my mama's coochie hole in 2022</option>
-                        <option value="2023">Deleted from my mama's coochie hole in 2023</option>
-                        <option value="2024">Deleted from my mama's coochie hole in 2024</option>
+                        <option value="1950">Showed up in 1950</option>
+                        <option value="1951">Showed up in 1951</option>
+                        <option value="1952">Showed up in 1952</option>
+                        <option value="1953">Showed up in 1953</option>
+                        <option value="1954">Showed up in 1954</option>
+                        <option value="1955">Showed up in 1955</option>
+                        <option value="1956">Showed up in 1956</option>
+                        <option value="1957">Showed up in 1957</option>
+                        <option value="1958">Showed up in 1958</option>
+                        <option value="1959">Showed up in 1959</option>
+                        <option value="1960">Showed up in 1960</option>
+                        <option value="1961">Showed up in 1961</option>
+                        <option value="1962">Showed up in 1962</option>
+                        <option value="1963">Showed up in 1963</option>
+                        <option value="1964">Showed up in 1964</option>
+                        <option value="1965">Showed up in 1965</option>
+                        <option value="1966">Showed up in 1966</option>
+                        <option value="1967">Showed up in 1967</option>
+                        <option value="1968">Showed up in 1968</option>
+                        <option value="1969">Showed up in 1969</option>
+                        <option value="1970">Showed up in 1970</option>
+                        <option value="1971">Showed up in 1971</option>
+                        <option value="1972">Showed up in 1972</option>
+                        <option value="1973">Showed up in 1973</option>
+                        <option value="1974">Showed up in 1974</option>
+                        <option value="1975">Showed up in 1975</option>
+                        <option value="1976">Showed up in 1976</option>
+                        <option value="1977">Showed up in 1977</option>
+                        <option value="1978">Showed up in 1978</option>
+                        <option value="1979">Showed up in 1979</option>
+                        <option value="1980">Showed up in 1980</option>
+                        <option value="1981">Showed up in 1981</option>
+                        <option value="1982">Showed up in 1982</option>
+                        <option value="1983">Showed up in 1983</option>
+                        <option value="1984">Showed up in 1984</option>
+                        <option value="1985">Showed up in 1985</option>
+                        <option value="1986">Showed up in 1986</option>
+                        <option value="1987">Showed up in 1987</option>
+                        <option value="1988">Showed up in 1988</option>
+                        <option value="1989">Showed up in 1989</option>
+                        <option value="1990">Showed up in 1990</option>
+                        <option value="1991">Showed up in 1991</option>
+                        <option value="1992">Showed up in 1992</option>
+                        <option value="1993">Showed up in 1993</option>
+                        <option value="1994">Showed up in 1994</option>
+                        <option value="1995">Showed up in 1995</option>
+                        <option value="1996">Showed up in 1996</option>
+                        <option value="1997">Showed up in 1997</option>
+                        <option value="1998">Showed up in 1998</option>
+                        <option value="1999">Showed up in 1999</option>
+                        <option value="2000">Showed up in 2000</option>
+                        <option value="2001">Showed up in 2001</option>
+                        <option value="2002">Showed up in 2002</option>
+                        <option value="2003">Showed up in 2003</option>
+                        <option value="2004">Showed up in 2004</option>
+                        <option value="2005">Showed up in 2005</option>
+                        <option value="2006">Showed up in 2006</option>
+                        <option value="2007">Showed up in 2007</option>
+                        <option value="2008">Showed up in 2008</option>
+                        <option value="2009">Showed up in 2009</option>
+                        <option value="2010">Showed up in 2010</option>
+                        <option value="2011">Showed up in 2011</option>
+                        <option value="2012">Showed up in 2012</option>
+                        <option value="2013">Showed up in 2013</option>
+                        <option value="2014">Showed up in 2014</option>
+                        <option value="2015">Showed up in 2015</option>
+                        <option value="2016">Showed up in 2016</option>
+                        <option value="2017">Showed up in 2017</option>
+                        <option value="2018">Showed up in 2018</option>
+                        <option value="2019">Showed up in 2019</option>
+                        <option value="2020">Showed up in 2020</option>
+                        <option value="2021">Showed up in 2021</option>
+                        <option value="2022">Showed up in 2022</option>
+                        <option value="2023">Showed up in 2023</option>
+                        <option value="2024">Showed up in 2024</option>
                     </select>
                 </div>
                 <div class="btn">
@@ -544,41 +490,47 @@
             </div>
             <div id="linkk">
                 <div class="paybutton">
-                    <button id="paybutton" onclick="pay()"></button>
+                    <div>
+                        <p class="time"></p>
+                        <button id="paybutton" onclick="pay()">Proceed to payment</button>
+                    </div>
                 </div>
             </div>
         </div> 
         <div class="fool">
             <div class="hackdisplay">
-                <h1 class="headerhack hack">FOOL STOP PANICKING IT'S A PRANK</h1>
-                <p>relax tulia buana ni jokes 😂😂 hujapigwa hack. Ur files, your device they are all safe and this is not a ransomware so relax 😭😭 usilie totoo tulia hutoi pesa alaaa. Unless you are offering me ata kashilingi kamoja tu 🥺🥹</p>
+                <h1 class="headerhack hack">😭RELAX, IT'S A PRANK🤣</h1>
+                <div class="img">
+                    <img src="https://media.tenor.com/vz0qBjDyUpwAAAAM/khat.gif" alt="laughing cat" height="300px" width="250px">
+                </div>
+                <p style="text-align: center;">Not only is a good prank harmless, but, like a good story, it reveals an essential truth that would otherwise be hidden🤣</p>
             </div>
             <button id="reloadbutton" onclick="reload()"></button>
             <div class="imgdisplay">
-                <div class="img">
-                    <img src="https://www.penispictures.com/wp-content/uploads/black-boy-with-a-big-cock-463x550.jpeg" alt="Porn" height="300px" width="250px">
+                <div class="laughingcat">
+                    <iframe width="110" height="200" src="https://www.myinstants.com/instant/cat-laugh-meme-1-15761/embed/" frameborder="0" scrolling="no"></iframe>
                 </div>
-                <p class="dickpic">This is me btw🤫😁</p>
+                <p class="laughbutton">🔝Yes that is a button🔝</p>
             </div>
         </div> 
     </main>
     <div class="deleted">
-        <h1 class="headerhack">DID YOU SERIOUSLY SIT THERE AND WAITED FOR THE COUNTDOWN TO ELAPSE? YOU ARE VERY VERY FUNNY!</h1>
+        <h1 class="headerhack">Did you seriously just sit there and watched as the timer elapsed ? What a funny individual you are!</h1>
     </div>
     <footer>
-        <p class="mobile">Seems like you ain't on PC</p>
-        <p class="mobile ver">v4.1.0</p>
+        <p class="mobile">On Mobile</p>
+        <p class="mobile ver">v4.2.0</p>
         <p>&copy; 2024-2025 Silverswag</p>
     </footer>
     <script>
         function reload(){
-            alert("LUCKY BASTARD! You have just saved your device for obliteration without paying a dime.");
+            alert("You have just saved your device for obliteration without paying a dime.");
             window.location.href = "index.html";
         }
         function kubali(){
             class Kubali{
                 constructor(){
-                    this.bali = document.querySelector(".kalk")
+                    this.bali = document.querySelector(".kalk");
                     this.name = document.getElementById("name").value;
                     this.ageText = document.getElementById("age");
                     this.age = "";
@@ -586,7 +538,7 @@
                     this.option1 = document.getElementById("selection1").value;
                     this.option2 = document.getElementById("selection2").value;
                     this.calculated = (this.option1 - this.option2);
-                    this.selection = document.querySelector(".selection")
+                    this.selection = document.querySelector(".selection");
                     this.namedisplay = document.querySelector(".name");
                 }
                 kubali(){
@@ -596,7 +548,7 @@
                     }else{
                         if(this.name.length != 0 && this.calculated != 0){
                             this.bali.style.display = "block";
-                            this.buttonkubali.style.display = "none"
+                            this.buttonkubali.style.display = "none";
                             this.age = "Click the above button to calculate your age.";
                             this.ageText.style.color = "lightgreen";
                             this.selection.style.display = "none";
@@ -671,25 +623,23 @@
         updateClock();
         setInterval(updateClock, 1000);
         class Prompt{
-            constructor(pass1,pass2,pass3){
-                this.pass1 = pass1;
-                this.pass2 = pass2;
-                this.pass3 = pass3;
+            constructor(pass){
+                this.pass = parseFloat(pass);
             }
             myPrompt(){
                 let userInput;
                 while(true){
-                    userInput = prompt("What are most women better at doing than men?");
-                    if(userInput === this.pass1 || userInput === this.pass2 || userInput === this.pass3) {
-                        alert(`Exactly they have no f*cking respect`);
+                    userInput = parseFloat(prompt("The sun is approximately 150,000,000 kilometers away from our home planet. How long does it take for light from the main sequence star to reach Earth in MINUTES ? (Answer in 2 decimal places)"));
+                    if(userInput === this.pass) {
+                        alert(`The internet will not help you next time!!!!`);
                         break;
                     }else{
-                        alert(`❌NOPE!`);
+                        alert(`❌You should have been more focused during physics classes.`);
                     }
                 }
             }
         }
-        let p = new Prompt("CHEATING","Cheating","cheating");
+        let p = new Prompt(8.33);
         p.myPrompt();
         function viewReleaseNotes(){
             class Notes{
@@ -725,6 +675,7 @@
                     this.age = "";
                     this.paybutton = document.getElementById("paybutton");
                     this.deleted = document.querySelector(".deleted")
+                    this.time = document.querySelector(".time");
                 }
                 yourAge(){
                     if(this.name.length == 0){
@@ -750,7 +701,7 @@
                     seconds = parseInt(timer % 60, 10);
                     minutes = minutes < 10 ? "0" + minutes : minutes;
                     seconds = seconds < 10 ? "0" + seconds : seconds;
-                    this.paybutton.textContent = `Click to pay 10,000KSH now (${minutes} Minutes ${seconds} Seconds left)`;
+                    this.time.textContent = `${minutes} Minutes ${seconds} Seconds left`;
                     if (--timer < 0) {
                         clearInterval(countdown);
                         this.paybutton.textContent = `TIME OUT! Files erased`;
