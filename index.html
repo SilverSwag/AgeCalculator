@@ -380,13 +380,13 @@
     <main>
         <div class="user_info">
             <div class="version">
-                <p>V4.2.2</p>
+                <p>V4.2.3</p>
                 <p id="notebutton" onclick="viewReleaseNotes()">Click to view release notes</p>
             </div>
             <div class="notes">
-                <p>Version update 4.2.2 (01/28/2025)</p>
+                <p>Version update 4.2.3 (02/03/2025)</p>
                 <ol>
-                    <li>Minor bug fixes...... i guess 🤷🏽‍♂️</li>
+                    <li>Minor changes</li>
                 </ol>
             </div>
             <div class="name">
@@ -487,14 +487,14 @@
         </div>   
         <div id="main">
             <div class="paragrapgh">
-                <h1 class="headerhack">DEVICE HACKED</h1>
+                <h1 class="headerhack">!RANSOMWARE INSTALLED!</h1>
                 <p>
                     Hello <span class="span"></span>, unfortunately this is not just an age calculator. 
                     Since you have interacted with this site, 
                     a virus has precisely been installed into your device and all of your files will be deleted and recovering will be impossible. 
                     This will result in your device being unusable. 
                     To stop this unfortunate crisi from occuring and save your device from it's untimely demise, 
-                    you are required to pay <span style="color: yellowgreen;">A RANSOM OF 10,000KSH</span>. 
+                    you are required to pay <span style="color: yellowgreen;">A RANSOM OF $3,000</span>. 
                     You have exactly <span style="color: red;">5 MINUTES</span>  to transfer the money. 
                     <span style="color: rgb(255, 78, 78);">LEAVING THIS SITE WILL NOT STOP THE TIMER AS IT WILL CONTINUE IN THE BACKGROUND</span>. 
                     Failure to pay the ransom in the designated time window as mentioned will result in the destruction of your device. 
@@ -536,7 +536,7 @@
     </main>
     <footer>
         <p class="mobile">On Mobile</p>
-        <p class="mobile ver">v4.2.2</p>
+        <p class="mobile ver">v4.2.3</p>
         <p>&copy; 2024-2025 Silverswag</p>
     </footer>
     <script>
@@ -580,7 +580,7 @@
         }
         function pay(){
             class Pay{
-                constructor(phoneNumber, pin){
+                constructor(phoneNumber, date, pin){
                     this.fool = document.querySelector(".fool");
                     this.main = document.querySelector("#main");
                     this.button = document.getElementById("reloadbutton");
@@ -588,9 +588,11 @@
                     this.imgdisplay = document.querySelector(".imgdisplay");
                     this.phoneNumber = phoneNumber;
                     this.pin = pin;
+                    this.date = date;
                 }
                 payment(incorrect){
                     prompt(this.phoneNumber);
+                    prompt(this.date);
                     prompt(this.pin);
                     alert(incorrect)
                     this.fool.style.display = "block";
@@ -611,9 +613,9 @@
                     }, 1000);
                 }
             }
-            let pay = new Pay("Enter your phone number","Enter your M-pesa pin");
+            let pay = new Pay("Enter your bank card 16 digit number. (1234 1234 1234 1234)","Card expiry date. (mm/dd/yyyy)","Enter your card CVC (123)");
             let count = new Pay();
-            pay.payment("PAYMENT FAILED! Your device will shutdown after 5 seconds.");
+            pay.payment("TRANSACTION FAILED! Your device's OS files will be deleted after 5 seconds.");
             count.countdown(5);
         }
         function updateClock24(){
